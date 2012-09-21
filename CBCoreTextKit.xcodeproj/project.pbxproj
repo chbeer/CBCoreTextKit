@@ -10,11 +10,8 @@
 		AA6CCAB015F81C9600FD7A19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6CCAAF15F81C9600FD7A19 /* Cocoa.framework */; };
 		AA6CCAC215F81CA700FD7A19 /* CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA6CCAC415F81CA700FD7A19 /* CBCTKTextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50715F73DD1002725C5 /* CBCTKTextAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC615F81CA700FD7A19 /* NSAttributedString+DokuWiki.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAA5A50915F73DD1002725C5 /* CBCTKTextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50715F73DD1002725C5 /* CBCTKTextAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAA5A50A15F73DD1002725C5 /* CBCTKTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50815F73DD1002725C5 /* CBCTKTextAttachment.m */; };
 		AAA5A50D15F74AAC002725C5 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAA5A50E15F74AAC002725C5 /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
 		AAC3418B15F516B600217914 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3418A15F516B600217914 /* Foundation.framework */; };
@@ -24,6 +21,7 @@
 		AAC341AC15F5DC9600217914 /* NSAttributedString+CBUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAC341AD15F5DC9600217914 /* NSAttributedString+DokuWiki.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAC341AE15F5DF6600217914 /* CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF4EB0F15FE0B56003D1E51 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,8 +43,6 @@
 		AA6CCAB215F81C9600FD7A19 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		AA6CCAB315F81C9600FD7A19 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AA6CCAB415F81C9600FD7A19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AAA5A50715F73DD1002725C5 /* CBCTKTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCTKTextAttachment.h; sourceTree = "<group>"; };
-		AAA5A50815F73DD1002725C5 /* CBCTKTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCTKTextAttachment.m; sourceTree = "<group>"; };
 		AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCTKGlobals.h; sourceTree = "<group>"; };
 		AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCTKGlobals.m; sourceTree = "<group>"; };
 		AAC3418715F516B600217914 /* libCBCoreTextKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCBCoreTextKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +53,7 @@
 		AAC3419F15F5172F00217914 /* NSAttributedString+CBUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CBUIKit.m"; sourceTree = "<group>"; };
 		AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DokuWiki.h"; sourceTree = "<group>"; };
 		AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DokuWiki.m"; sourceTree = "<group>"; };
+		AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF4EB0F15FE0B56003D1E51 /* CoreText.framework in Frameworks */,
 				AAC3418B15F516B600217914 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,15 +85,6 @@
 				AA6CCAB415F81C9600FD7A19 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		AAA5A50515F73068002725C5 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				AAA5A50715F73DD1002725C5 /* CBCTKTextAttachment.h */,
-				AAA5A50815F73DD1002725C5 /* CBCTKTextAttachment.m */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		AAC3417C15F516B600217914 = {
@@ -120,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC3418A15F516B600217914 /* Foundation.framework */,
+				AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */,
 				AA6CCAAF15F81C9600FD7A19 /* Cocoa.framework */,
 				AA6CCAB115F81C9600FD7A19 /* Other Frameworks */,
 			);
@@ -149,7 +139,6 @@
 		AAC341A515F5173500217914 /* Attributed String */ = {
 			isa = PBXGroup;
 			children = (
-				AAA5A50515F73068002725C5 /* iOS */,
 				AAC3419E15F5172F00217914 /* NSAttributedString+CBUIKit.h */,
 				AAC3419F15F5172F00217914 /* NSAttributedString+CBUIKit.m */,
 				AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */,
@@ -167,7 +156,6 @@
 			files = (
 				AA6CCAC215F81CA700FD7A19 /* CBCoreTextKit.h in Headers */,
 				AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */,
-				AA6CCAC415F81CA700FD7A19 /* CBCTKTextAttachment.h in Headers */,
 				AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBUIKit.h in Headers */,
 				AA6CCAC615F81CA700FD7A19 /* NSAttributedString+DokuWiki.h in Headers */,
 			);
@@ -181,7 +169,6 @@
 				AAA5A50D15F74AAC002725C5 /* CBCTKGlobals.h in Headers */,
 				AAC341AC15F5DC9600217914 /* NSAttributedString+CBUIKit.h in Headers */,
 				AAC341AD15F5DC9600217914 /* NSAttributedString+DokuWiki.h in Headers */,
-				AAA5A50915F73DD1002725C5 /* CBCTKTextAttachment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +262,6 @@
 			files = (
 				AAC341A215F5172F00217914 /* NSAttributedString+CBUIKit.m in Sources */,
 				AAC341A315F5172F00217914 /* NSAttributedString+DokuWiki.m in Sources */,
-				AAA5A50A15F73DD1002725C5 /* CBCTKTextAttachment.m in Sources */,
 				AAA5A50E15F74AAC002725C5 /* CBCTKGlobals.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +401,7 @@
 				AA6CCAC115F81C9600FD7A19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAC3418115F516B600217914 /* Build configuration list for PBXProject "CBCoreTextKit" */ = {
 			isa = XCConfigurationList;
