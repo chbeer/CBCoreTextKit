@@ -12,5 +12,8 @@
 #if TARGET_OS_IPHONE
 typedef UIColor CBColor;
 #else
+
+#import <AppKit/AppKit.h>
+
 typedef NSColor CBColor;
 #endif

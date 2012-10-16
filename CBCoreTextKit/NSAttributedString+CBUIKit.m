@@ -187,7 +187,7 @@ BOOL CBNSAttributedStringParagraphAttributesZero(CBNSAttributedStringParagraphAt
 #pragma mark - By font name
 
 + (id) attributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize
-                        underline:(BOOL)underline textColor:(UIColor*)textColor paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
+                        underline:(BOOL)underline textColor:(CBColor*)textColor paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
              additionalAttributes:(NSDictionary*)additionalAttributes
 {
     if (!string) return nil;
@@ -231,12 +231,12 @@ BOOL CBNSAttributedStringParagraphAttributesZero(CBNSAttributedStringParagraphAt
     return attrString;
 }
 + (id) attributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize
-                        underline:(BOOL)underline textColor:(UIColor*)textColor paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
+                        underline:(BOOL)underline textColor:(CBColor*)textColor paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
 {
     return [self attributedStringWithString:string fontName:fontName fontSize:fontSize underline:underline textColor:textColor paragraphAttributes:paragraphAttributes additionalAttributes:nil];
 }
 + (id) attributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize
-                        underline:(BOOL)underline textColor:(UIColor*)textColor
+                        underline:(BOOL)underline textColor:(CBColor*)textColor
 {
     return [self attributedStringWithString:string fontName:fontName fontSize:fontSize underline:underline textColor:textColor paragraphAttributes:kCBNSParagraphAttributesZero additionalAttributes:nil];
 }
@@ -327,18 +327,18 @@ BOOL CBNSAttributedStringParagraphAttributesZero(CBNSAttributedStringParagraphAt
     [self appendAttributedString:[NSAttributedString attributedStringWithString:string fontFamilyName:fontFamily fontSize:fontSize fontAttributes:attributes paragraphAttributes:kCBNSParagraphAttributesZero additionalAttributes:nil]];
 }
 
-- (void) appendAttributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize underline:(BOOL)underline textColor:(UIColor*)textColor
+- (void) appendAttributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize underline:(BOOL)underline textColor:(CBColor*)textColor
                       paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
                      additionalAttributes:(NSDictionary*)additionalAttributes
 {
     [self appendAttributedString:[NSAttributedString attributedStringWithString:string fontName:fontName fontSize:fontSize underline:underline textColor:textColor paragraphAttributes:paragraphAttributes additionalAttributes:additionalAttributes]];
 }
-- (void) appendAttributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize underline:(BOOL)underline textColor:(UIColor*)textColor
+- (void) appendAttributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize underline:(BOOL)underline textColor:(CBColor*)textColor
                       paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
 {
     [self appendAttributedString:[NSAttributedString attributedStringWithString:string fontName:fontName fontSize:fontSize underline:underline textColor:textColor paragraphAttributes:paragraphAttributes additionalAttributes:nil]];
 }
-- (void) appendAttributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize underline:(BOOL)underline textColor:(UIColor*)textColor
+- (void) appendAttributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize underline:(BOOL)underline textColor:(CBColor*)textColor
 {
     [self appendAttributedString:[NSAttributedString attributedStringWithString:string fontName:fontName fontSize:fontSize underline:underline textColor:textColor paragraphAttributes:kCBNSParagraphAttributesZero additionalAttributes:nil]];
 }

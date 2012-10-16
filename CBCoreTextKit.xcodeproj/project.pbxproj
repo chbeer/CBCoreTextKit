@@ -12,6 +12,9 @@
 		AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC615F81CA700FD7A19 /* NSAttributedString+DokuWiki.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA91A4F8162A27AE00B5F20F /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
+		AA91A4F9162A27B600B5F20F /* NSAttributedString+CBUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBUIKit.m */; };
+		AA91A4FA162A27B600B5F20F /* NSAttributedString+DokuWiki.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */; };
 		AAA5A50D15F74AAC002725C5 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAA5A50E15F74AAC002725C5 /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
 		AAC3418B15F516B600217914 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3418A15F516B600217914 /* Foundation.framework */; };
@@ -253,6 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA91A4F8162A27AE00B5F20F /* CBCTKGlobals.m in Sources */,
+				AA91A4F9162A27B600B5F20F /* NSAttributedString+CBUIKit.m in Sources */,
+				AA91A4FA162A27B600B5F20F /* NSAttributedString+DokuWiki.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +282,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP4.app/Contents/Developer/Library/Frameworks\"",
-				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -302,10 +304,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP4.app/Contents/Developer/Library/Frameworks\"",
-				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -33,6 +33,7 @@ typedef struct {
 } CBNSAttributedStringParagraphAttributes;
 
 extern const CBNSAttributedStringParagraphAttributes kCBNSDefaultParagraphAttributes;
+extern const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesZero;
 
 
 @interface NSAttributedString (CBUIKit)
