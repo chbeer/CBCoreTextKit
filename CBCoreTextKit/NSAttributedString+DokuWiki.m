@@ -8,7 +8,7 @@
 
 #import "NSAttributedString+DokuWiki.h"
 
-#import "NSAttributedString+CBUIKit.h"
+#import "NSAttributedString+CBCoreTextKit.h"
 
 // NOTE: this only supports the basic text formatting described here: http://www.dokuwiki.org/syntax
 //

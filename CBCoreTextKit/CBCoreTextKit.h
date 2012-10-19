@@ -17,5 +17,7 @@
 
 #import "CBCTKGlobals.h"
 
-#import "NSAttributedString+CBUIKit.h"
+#import "NSAttributedString+CBCoreTextKit.h"
+#import "NSAttributedString+Glyphs.h"
+#import "NSAttributedString+HTML.h"
 #import "NSAttributedString+DokuWiki.h"

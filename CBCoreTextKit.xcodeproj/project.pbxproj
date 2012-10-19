@@ -10,20 +10,28 @@
 		AA6CCAB015F81C9600FD7A19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6CCAAF15F81C9600FD7A19 /* Cocoa.framework */; };
 		AA6CCAC215F81CA700FD7A19 /* CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC615F81CA700FD7A19 /* NSAttributedString+DokuWiki.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA91A4F8162A27AE00B5F20F /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
-		AA91A4F9162A27B600B5F20F /* NSAttributedString+CBUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBUIKit.m */; };
+		AA91A4F9162A27B600B5F20F /* NSAttributedString+CBCoreTextKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBCoreTextKit.m */; };
 		AA91A4FA162A27B600B5F20F /* NSAttributedString+DokuWiki.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */; };
 		AAA5A50D15F74AAC002725C5 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAA5A50E15F74AAC002725C5 /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
 		AAC3418B15F516B600217914 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3418A15F516B600217914 /* Foundation.framework */; };
 		AAC3419015F516B600217914 /* CBCoreTextKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; };
-		AAC341A215F5172F00217914 /* NSAttributedString+CBUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBUIKit.m */; };
+		AAC341A215F5172F00217914 /* NSAttributedString+CBCoreTextKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBCoreTextKit.m */; };
 		AAC341A315F5172F00217914 /* NSAttributedString+DokuWiki.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */; };
-		AAC341AC15F5DC9600217914 /* NSAttributedString+CBUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC341AC15F5DC9600217914 /* NSAttributedString+CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAC341AD15F5DC9600217914 /* NSAttributedString+DokuWiki.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAC341AE15F5DF6600217914 /* CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACA2E8A16311367006D28C6 /* NSAttributedString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2E8816311367006D28C6 /* NSAttributedString+HTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACA2E8B16311367006D28C6 /* NSAttributedString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2E8816311367006D28C6 /* NSAttributedString+HTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACA2E8C16311367006D28C6 /* NSAttributedString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8916311367006D28C6 /* NSAttributedString+HTML.m */; };
+		AACA2E8D16311367006D28C6 /* NSAttributedString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8916311367006D28C6 /* NSAttributedString+HTML.m */; };
+		AACA2E90163113E3006D28C6 /* NSAttributedString+Glyphs.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2E8E163113E3006D28C6 /* NSAttributedString+Glyphs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACA2E91163113E3006D28C6 /* NSAttributedString+Glyphs.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2E8E163113E3006D28C6 /* NSAttributedString+Glyphs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACA2E92163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
+		AACA2E93163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
 		AAF4EB0F15FE0B56003D1E51 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +60,14 @@
 		AAC3418A15F516B600217914 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AAC3418E15F516B600217914 /* CBCoreTextKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBCoreTextKit-Prefix.pch"; sourceTree = "<group>"; };
 		AAC3418F15F516B600217914 /* CBCoreTextKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCoreTextKit.h; sourceTree = "<group>"; };
-		AAC3419E15F5172F00217914 /* NSAttributedString+CBUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CBUIKit.h"; sourceTree = "<group>"; };
-		AAC3419F15F5172F00217914 /* NSAttributedString+CBUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CBUIKit.m"; sourceTree = "<group>"; };
+		AAC3419E15F5172F00217914 /* NSAttributedString+CBCoreTextKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CBCoreTextKit.h"; sourceTree = "<group>"; };
+		AAC3419F15F5172F00217914 /* NSAttributedString+CBCoreTextKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CBCoreTextKit.m"; sourceTree = "<group>"; };
 		AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+DokuWiki.h"; sourceTree = "<group>"; };
 		AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+DokuWiki.m"; sourceTree = "<group>"; };
+		AACA2E8816311367006D28C6 /* NSAttributedString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+HTML.h"; sourceTree = "<group>"; };
+		AACA2E8916311367006D28C6 /* NSAttributedString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HTML.m"; sourceTree = "<group>"; };
+		AACA2E8E163113E3006D28C6 /* NSAttributedString+Glyphs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Glyphs.h"; sourceTree = "<group>"; };
+		AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Glyphs.m"; sourceTree = "<group>"; };
 		AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -142,8 +154,12 @@
 		AAC341A515F5173500217914 /* Attributed String */ = {
 			isa = PBXGroup;
 			children = (
-				AAC3419E15F5172F00217914 /* NSAttributedString+CBUIKit.h */,
-				AAC3419F15F5172F00217914 /* NSAttributedString+CBUIKit.m */,
+				AAC3419E15F5172F00217914 /* NSAttributedString+CBCoreTextKit.h */,
+				AAC3419F15F5172F00217914 /* NSAttributedString+CBCoreTextKit.m */,
+				AACA2E8E163113E3006D28C6 /* NSAttributedString+Glyphs.h */,
+				AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */,
+				AACA2E8816311367006D28C6 /* NSAttributedString+HTML.h */,
+				AACA2E8916311367006D28C6 /* NSAttributedString+HTML.m */,
 				AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */,
 				AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */,
 			);
@@ -159,8 +175,10 @@
 			files = (
 				AA6CCAC215F81CA700FD7A19 /* CBCoreTextKit.h in Headers */,
 				AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */,
-				AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBUIKit.h in Headers */,
+				AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBCoreTextKit.h in Headers */,
 				AA6CCAC615F81CA700FD7A19 /* NSAttributedString+DokuWiki.h in Headers */,
+				AACA2E8B16311367006D28C6 /* NSAttributedString+HTML.h in Headers */,
+				AACA2E91163113E3006D28C6 /* NSAttributedString+Glyphs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,8 +188,10 @@
 			files = (
 				AAC341AE15F5DF6600217914 /* CBCoreTextKit.h in Headers */,
 				AAA5A50D15F74AAC002725C5 /* CBCTKGlobals.h in Headers */,
-				AAC341AC15F5DC9600217914 /* NSAttributedString+CBUIKit.h in Headers */,
+				AAC341AC15F5DC9600217914 /* NSAttributedString+CBCoreTextKit.h in Headers */,
 				AAC341AD15F5DC9600217914 /* NSAttributedString+DokuWiki.h in Headers */,
+				AACA2E8A16311367006D28C6 /* NSAttributedString+HTML.h in Headers */,
+				AACA2E90163113E3006D28C6 /* NSAttributedString+Glyphs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA91A4F8162A27AE00B5F20F /* CBCTKGlobals.m in Sources */,
-				AA91A4F9162A27B600B5F20F /* NSAttributedString+CBUIKit.m in Sources */,
+				AA91A4F9162A27B600B5F20F /* NSAttributedString+CBCoreTextKit.m in Sources */,
 				AA91A4FA162A27B600B5F20F /* NSAttributedString+DokuWiki.m in Sources */,
+				AACA2E8D16311367006D28C6 /* NSAttributedString+HTML.m in Sources */,
+				AACA2E93163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAC341A215F5172F00217914 /* NSAttributedString+CBUIKit.m in Sources */,
+				AAC341A215F5172F00217914 /* NSAttributedString+CBCoreTextKit.m in Sources */,
 				AAC341A315F5172F00217914 /* NSAttributedString+DokuWiki.m in Sources */,
 				AAA5A50E15F74AAC002725C5 /* CBCTKGlobals.m in Sources */,
+				AACA2E8C16311367006D28C6 /* NSAttributedString+HTML.m in Sources */,
+				AACA2E92163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
