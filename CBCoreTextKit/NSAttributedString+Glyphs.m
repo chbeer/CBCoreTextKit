@@ -16,7 +16,7 @@
 {
     if (!glyphName) return nil;
     
-    CTGlyphInfoRef glyphInfo = CTGlyphInfoCreateWithGlyphName((__bridge CFStringRef)glyphName, (__bridge CTFontRef)(font), (__bridge CFStringRef)@"x");
+    CTGlyphInfoRef glyphInfo = CTGlyphInfoCreateWithGlyphName((__bridge CFStringRef)glyphName, (__bridge CTFontRef)(font), (__bridge CFStringRef)glyphName);
     if (!glyphInfo) {
         return nil;
     }
@@ -43,7 +43,7 @@
     
     [attr setObject:(__bridge id)glyphInfo forKey:(id)kCTGlyphInfoAttributeName];
     
-    NSAttributedString *attrString = [[self alloc] initWithString:@"x"
+    NSAttributedString *attrString = [[self alloc] initWithString:glyphName
                                                        attributes:attr];
     
     CFRelease(glyphInfo);
