@@ -21,3 +21,4 @@
 #import "NSAttributedString+Glyphs.h"
 #import "NSAttributedString+HTML.h"
 #import "NSAttributedString+DokuWiki.h"
+#import "NSAttributedString+Markdown.h"

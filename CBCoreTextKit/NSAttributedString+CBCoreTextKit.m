@@ -278,4 +278,25 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
     [self appendAttributedString:[NSAttributedString attributedStringWithString:string fontName:fontName fontSize:fontSize underline:underline textColor:textColor paragraphAttributes:kCBNSParagraphAttributesZero additionalAttributes:nil]];
 }
 
+- (void) cbctk_applyFontSize:(CGFloat)fontSize
+{
+    [self enumerateAttributesInRange:NSMakeRange(0, self.length)
+                               options:0
+                            usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop) {
+                                CTFontRef font = (__bridge CTFontRef)([attrs objectForKey:(id)kCTFontAttributeName]);
+                                
+                                if (font) {
+                                    CTFontDescriptorRef desc = CTFontCopyFontDescriptor(font);
+                                    font = CTFontCreateWithFontDescriptor(desc, fontSize, NULL);
+                                    CFRelease(desc);
+                                } else {
+                                    // from CTFont documentation: "Default is Helvetica 12."
+                                    font = CTFontCreateWithName((CFStringRef)@"Helvetica", fontSize, NULL);
+                                }
+                                
+                                [self addAttribute:(id)kCTFontAttributeName value:(__bridge id)font range:range];
+                                CFRelease(font);
+                            }];
+}
+
 @end

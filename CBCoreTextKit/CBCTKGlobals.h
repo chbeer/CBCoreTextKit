@@ -11,9 +11,12 @@
 
 #if TARGET_OS_IPHONE
 typedef UIColor CBColor;
+typedef UIFont  CBFont;
 #else
 
 #import <AppKit/AppKit.h>
 
 typedef NSColor CBColor;
+typedef NSFont  CBFont;
+
 #endif
