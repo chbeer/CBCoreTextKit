@@ -1,0 +1,18 @@
+//
+// Prefix header for all source files of the 'CBCoreTextKitTest' target in the 'CBCoreTextKitTest' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+
+#if TARGET_OS_IPHONE
+
+#import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
+
+#endif
+
+
+#endif
