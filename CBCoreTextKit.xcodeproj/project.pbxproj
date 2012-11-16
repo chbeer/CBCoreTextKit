@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA512C54164A365A00E497FE /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; };
+		AA512C55164A365A00E497FE /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; };
+		AA512C56164A365A00E497FE /* CBCTKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA512C53164A365A00E497FE /* CBCTKFontManager.m */; };
+		AA512C57164A365A00E497FE /* CBCTKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA512C53164A365A00E497FE /* CBCTKFontManager.m */; };
 		AA6CCAB015F81C9600FD7A19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6CCAAF15F81C9600FD7A19 /* Cocoa.framework */; };
 		AA6CCAC215F81CA700FD7A19 /* CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA512C52164A365A00E497FE /* CBCTKFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCTKFontManager.h; sourceTree = "<group>"; };
+		AA512C53164A365A00E497FE /* CBCTKFontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCTKFontManager.m; sourceTree = "<group>"; };
 		AA6CCAAE15F81C9600FD7A19 /* CBCoreTextKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCoreTextKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6CCAAF15F81C9600FD7A19 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		AA6CCAB215F81C9600FD7A19 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -207,6 +213,8 @@
 				AAC3418F15F516B600217914 /* CBCoreTextKit.h */,
 				AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */,
 				AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */,
+				AA512C52164A365A00E497FE /* CBCTKFontManager.h */,
+				AA512C53164A365A00E497FE /* CBCTKFontManager.m */,
 				AAC341A515F5173500217914 /* Attributed String */,
 				AAC3418D15F516B600217914 /* Supporting Files */,
 			);
@@ -252,6 +260,7 @@
 				AACA2E8B16311367006D28C6 /* NSAttributedString+HTML.h in Headers */,
 				AACA2E91163113E3006D28C6 /* NSAttributedString+Glyphs.h in Headers */,
 				AA9C9165164DA0EF00F75427 /* NSAttributedString+Markdown.h in Headers */,
+				AA512C55164A365A00E497FE /* CBCTKFontManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +275,7 @@
 				AACA2E8A16311367006D28C6 /* NSAttributedString+HTML.h in Headers */,
 				AACA2E90163113E3006D28C6 /* NSAttributedString+Glyphs.h in Headers */,
 				AA9C9164164DA0EF00F75427 /* NSAttributedString+Markdown.h in Headers */,
+				AA512C54164A365A00E497FE /* CBCTKFontManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +409,7 @@
 				AA91A4FA162A27B600B5F20F /* NSAttributedString+DokuWiki.m in Sources */,
 				AACA2E8D16311367006D28C6 /* NSAttributedString+HTML.m in Sources */,
 				AACA2E93163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */,
+				AA512C57164A365A00E497FE /* CBCTKFontManager.m in Sources */,
 				AA9C9167164DA0EF00F75427 /* NSAttributedString+Markdown.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +436,7 @@
 				AAA5A50E15F74AAC002725C5 /* CBCTKGlobals.m in Sources */,
 				AACA2E8C16311367006D28C6 /* NSAttributedString+HTML.m in Sources */,
 				AACA2E92163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */,
+				AA512C56164A365A00E497FE /* CBCTKFontManager.m in Sources */,
 				AA9C9166164DA0EF00F75427 /* NSAttributedString+Markdown.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +475,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBCoreTextKit/CBCoreTextKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = "./Libraries/discount-config";
 				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -485,6 +498,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBCoreTextKit/CBCoreTextKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = "./Libraries/discount-config";
 				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +517,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBCoreTextKitTest/CBCoreTextKitTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = "./Libraries/discount-config";
 				INFOPLIST_FILE = "CBCoreTextKitTest/CBCoreTextKitTest-Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,6 +535,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBCoreTextKitTest/CBCoreTextKitTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = "./Libraries/discount-config";
 				INFOPLIST_FILE = "CBCoreTextKitTest/CBCoreTextKitTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -577,6 +593,7 @@
 				DSTROOT = /tmp/CBCoreTextKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBCoreTextKit/CBCoreTextKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = "./Libraries/discount-config";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = CBCoreTextKit;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)";
@@ -591,6 +608,7 @@
 				DSTROOT = /tmp/CBCoreTextKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBCoreTextKit/CBCoreTextKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = "./Libraries/discount-config";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = CBCoreTextKit;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)";
