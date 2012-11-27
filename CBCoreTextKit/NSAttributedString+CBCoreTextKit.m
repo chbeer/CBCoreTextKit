@@ -108,6 +108,8 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
                    fontAttributes:(CBNSAttributedStringFontAttributes)fontAttributes paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
              additionalAttributes:(NSDictionary*)additionalAttributes
 {
+    if (!string) return nil;
+    
     /// ---  FONT ---
     
     CTFontSymbolicTraits traits = 0;
