@@ -301,4 +301,16 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
                             }];
 }
 
+- (void) addParagraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes range:(NSRange)range
+{
+    [self addAttribute:(id)kCTParagraphStyleAttributeName
+                 value:(__bridge id)(CBCTKCreateParagraphStyleFromParagraphAttributes(paragraphAttributes))
+                 range:range];
+}
+- (void) addParagraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
+{
+    [self addParagraphAttributes:paragraphAttributes
+                             range:NSMakeRange(0, self.length)];
+}
+
 @end

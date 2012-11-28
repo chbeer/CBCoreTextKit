@@ -76,4 +76,7 @@ extern CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNS
 
 - (void) cbctk_applyFontSize:(CGFloat)fontSize;
 
+- (void) addParagraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes range:(NSRange)range;
+- (void) addParagraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes;
+
 @end
