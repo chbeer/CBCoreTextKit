@@ -85,6 +85,8 @@
 
 - (NSAttributedString*) parseMarkdownString:(NSString*)string
 {
+    if (!string) return nil;
+    
     NSMutableAttributedString *result = [NSMutableAttributedString attributedStringWithString:string
                                                                                fontFamilyName:self.fontFamilyName fontSize:self.fontSize
                                                                                fontAttributes:(CBNSAttributedStringFontAttributes){.textColor = self.textColor.CGColor}];
