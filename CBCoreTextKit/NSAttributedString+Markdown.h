@@ -20,4 +20,7 @@
 + (NSAttributedString *)attributedStringWithMarkdownString:(NSString *)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize;
 + (NSAttributedString *)attributedStringWithMarkdownString:(NSString *)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize textColor:(UIColor*)textColor;
 
+
++ (NSRegularExpression*) markdownRegularExpressionForStrong:(NSError*__autoreleasing*)error;
+
 @end

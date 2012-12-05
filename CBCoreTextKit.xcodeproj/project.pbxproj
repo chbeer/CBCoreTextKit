@@ -16,6 +16,7 @@
 		AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC615F81CA700FD7A19 /* NSAttributedString+DokuWiki.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7D3551166F2851006FCCA5 /* NSAttributedString+Markdown.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9C9163164DA0EE00F75427 /* NSAttributedString+Markdown.m */; };
 		AA91A4F8162A27AE00B5F20F /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
 		AA91A4F9162A27B600B5F20F /* NSAttributedString+CBCoreTextKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBCoreTextKit.m */; };
 		AA91A4FA162A27B600B5F20F /* NSAttributedString+DokuWiki.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */; };
@@ -25,6 +26,7 @@
 		AA9C9167164DA0EF00F75427 /* NSAttributedString+Markdown.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9C9163164DA0EE00F75427 /* NSAttributedString+Markdown.m */; };
 		AAA5A50D15F74AAC002725C5 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAA5A50E15F74AAC002725C5 /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
+		AABBBF6F166F2441000C16D9 /* CBNSAttributedStringMarkdownParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AABBBF6E166F2441000C16D9 /* CBNSAttributedStringMarkdownParserTest.m */; };
 		AABE57AD164519ED00F7CF5B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABE57AC164519ED00F7CF5B /* SenTestingKit.framework */; };
 		AABE57AF164519EE00F7CF5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABE57AE164519ED00F7CF5B /* UIKit.framework */; };
 		AABE57B0164519EE00F7CF5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC3418A15F516B600217914 /* Foundation.framework */; };
@@ -89,6 +91,8 @@
 		AA9C9163164DA0EE00F75427 /* NSAttributedString+Markdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Markdown.m"; sourceTree = "<group>"; };
 		AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCTKGlobals.h; sourceTree = "<group>"; };
 		AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCTKGlobals.m; sourceTree = "<group>"; };
+		AABBBF6D166F2441000C16D9 /* CBNSAttributedStringMarkdownParserTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBNSAttributedStringMarkdownParserTest.h; sourceTree = "<group>"; };
+		AABBBF6E166F2441000C16D9 /* CBNSAttributedStringMarkdownParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNSAttributedStringMarkdownParserTest.m; sourceTree = "<group>"; };
 		AABE57AB164519ED00F7CF5B /* CBCoreTextKitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBCoreTextKitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABE57AC164519ED00F7CF5B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		AABE57AE164519ED00F7CF5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -160,6 +164,8 @@
 				AABE57B7164519EE00F7CF5B /* CBCoreTextKitTest.h */,
 				AABE57B8164519EE00F7CF5B /* CBCoreTextKitTest.m */,
 				AABE57B2164519EE00F7CF5B /* Supporting Files */,
+				AABBBF6D166F2441000C16D9 /* CBNSAttributedStringMarkdownParserTest.h */,
+				AABBBF6E166F2441000C16D9 /* CBNSAttributedStringMarkdownParserTest.m */,
 			);
 			path = CBCoreTextKitTest;
 			sourceTree = "<group>";
@@ -424,6 +430,8 @@
 				AABE57D41645313100F7CF5B /* NSAttributedString+Glyphs.m in Sources */,
 				AABE57D51645313100F7CF5B /* NSAttributedString+HTML.m in Sources */,
 				AABE57D61645313100F7CF5B /* NSAttributedString+DokuWiki.m in Sources */,
+				AABBBF6F166F2441000C16D9 /* CBNSAttributedStringMarkdownParserTest.m in Sources */,
+				AA7D3551166F2851006FCCA5 /* NSAttributedString+Markdown.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

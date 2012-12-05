@@ -10,6 +10,20 @@
 
 #import "NSAttributedString+CBCoreTextKit.h"
 
+
+
+// NOTE: this is work in progress!! Switching to Regular Expressions...
+
+
+
+/** This Markdown scanner currently only supports the following:
+
+ EMPHASIS
+ 
+ Markdown treats asterisks (*) and underscores (_) as indicators of emphasis. Text wrapped with one * or _ will be wrapped with an HTML <em> tag; double *’s or _’s will be wrapped with an HTML <strong> tag.
+ (where <em> is treated as italic; <strong> as bold)
+ */
+
 @implementation NSAttributedString (Markdown)
 
 - (id)initWithMarkdownData:(NSData *)data options:(NSDictionary*)dict;
@@ -102,6 +116,28 @@
 + (NSAttributedString *)attributedStringWithMarkdownString:(NSString *)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize;
 {
     return [[self alloc] initWithMarkdownString:string fontFamilyName:fontFamily fontSize:fontSize];
+}
+
+#pragma mark - Regular Expressions
+
+/* From Markdown 1.0.1
+ sub _DoItalicsAndBold {
+ my $text = shift;
+ 
+ # <strong> must go first:
+ $text =~ s{ (\*\*|__) (?=\S) (.+?[*_]*) (?<=\S) \1 }
+ {<strong>$2</strong>}gsx;
+ 
+ $text =~ s{ (\*|_) (?=\S) (.+?) (?<=\S) \1 }
+ {<em>$2</em>}gsx;
+ 
+ return $text;
+ }
+*/
++ (NSRegularExpression*) markdownRegularExpressionForStrong:(NSError*__autoreleasing*)error
+{
+    return [NSRegularExpression regularExpressionWithPattern:@"(\\*\\*|__)(?=\\S)(.+?[*_]*)(?<=\\S)\\1"
+                                                     options:0 error:error];
 }
 
 @end
