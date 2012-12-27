@@ -29,7 +29,7 @@
     NSMutableArray *_formatPatterns;
 }
 
-- (id) initWithFontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize textColor:(UIColor*)textColor;
+- (id) initWithFontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize textColor:(CBColor*)textColor;
 {
     self = [super init];
     if (!self) return nil;

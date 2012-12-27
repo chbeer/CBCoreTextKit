@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "CBCTKGlobals.h"
+
+
 typedef NSAttributedString*(^CBCTKMarkdownFormatHandler)(NSTextCheckingResult *result, NSString *markdownString, NSRange *replacementRange);
 
 @interface CBCTKMarkdownParser : NSObject
@@ -16,11 +19,11 @@ typedef NSAttributedString*(^CBCTKMarkdownFormatHandler)(NSTextCheckingResult *r
 
 @property (nonatomic, strong) NSString  *fontFamilyName;
 @property (nonatomic, assign) CGFloat   fontSize;
-@property (nonatomic, strong) UIColor   *textColor;
+@property (nonatomic, strong) CBColor   *textColor;
 
 
 - (id) init;
-- (id) initWithFontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize textColor:(UIColor*)textColor;
+- (id) initWithFontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize textColor:(CBColor*)textColor;
 
 - (NSAttributedString*) parseMarkdownString:(NSString*)string;
 
