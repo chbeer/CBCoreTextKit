@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA512C54164A365A00E497FE /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; };
-		AA512C55164A365A00E497FE /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; };
+		AA512C54164A365A00E497FE /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA512C55164A365A00E497FE /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA512C56164A365A00E497FE /* CBCTKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA512C53164A365A00E497FE /* CBCTKFontManager.m */; };
 		AA512C57164A365A00E497FE /* CBCTKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA512C53164A365A00E497FE /* CBCTKFontManager.m */; };
 		AA6CCAB015F81C9600FD7A19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6CCAAF15F81C9600FD7A19 /* Cocoa.framework */; };

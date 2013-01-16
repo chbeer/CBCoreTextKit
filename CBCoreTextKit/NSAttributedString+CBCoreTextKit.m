@@ -10,6 +10,8 @@
 
 #import "NSAttributedString+CBCoreTextKit.h"
 
+#import "CBCTKFontManager.h"
+
 const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesDefault = { kCTNaturalTextAlignment, 0.0, 0.0, 0.0, 0.0, kCTLineBreakByWordWrapping, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, kCTWritingDirectionNatural};
 const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesZero = { 0, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0};
 
@@ -112,29 +114,38 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
     
     /// ---  FONT ---
     
-    CTFontSymbolicTraits traits = 0;
-    if (fontAttributes.bold)
-	{
-		traits |= kCTFontBoldTrait;
-	}
-	if (fontAttributes.italic)
-	{
-		traits |= kCTFontItalicTrait;
-	}
-	if (fontAttributes.monospace)
-	{
-		traits |= kCTFontMonoSpaceTrait;
-	}
+    CTFontRef font;
     
-    NSDictionary *fontAttr = [NSDictionary dictionaryWithObjectsAndKeys:
-                              fontFamily, kCTFontFamilyNameAttribute,
-                              [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:traits]
-                                                          forKey:(id)kCTFontSymbolicTrait], kCTFontTraitsAttribute,
-                              nil];
-    
-    CTFontDescriptorRef descriptor = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)fontAttr);
-    CTFontRef font = CTFontCreateWithFontDescriptor(descriptor, fontSize, NULL);
-    CFRelease(descriptor);
+    NSString *fontName = [CBCTKFontManager fontNameForFontWithFamilyName:fontFamily italic:fontAttributes.italic bold:fontAttributes.bold monospace:fontAttributes.monospace];
+    if (fontName) {
+        
+        font = CTFontCreateWithName((__bridge CFStringRef)fontName, fontSize, NULL);
+        
+    } else {
+        CTFontSymbolicTraits traits = 0;
+        if (fontAttributes.bold)
+        {
+            traits |= kCTFontBoldTrait;
+        }
+        if (fontAttributes.italic)
+        {
+            traits |= kCTFontItalicTrait;
+        }
+        if (fontAttributes.monospace)
+        {
+            traits |= kCTFontMonoSpaceTrait;
+        }
+        
+        NSDictionary *fontAttr = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  fontFamily, kCTFontFamilyNameAttribute,
+                                  [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:traits]
+                                                              forKey:(id)kCTFontSymbolicTrait], kCTFontTraitsAttribute,
+                                  nil];
+        
+        CTFontDescriptorRef descriptor = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)fontAttr);
+        font = CTFontCreateWithFontDescriptor(descriptor, fontSize, NULL);
+        CFRelease(descriptor);
+    }
     
     NSMutableDictionary *attr = [NSMutableDictionary dictionary];
     [attr setObject:(__bridge id)font

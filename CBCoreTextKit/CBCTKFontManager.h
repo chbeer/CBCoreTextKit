@@ -13,7 +13,7 @@
 
 @interface CBCTKFontManager : NSObject
 
-+ (void) registerFontWithName:(NSString*)fontName withFamilyName:(NSString*)family italic:(BOOL)italic bold:(BOOL)bold;
-+ (NSString*) fontNameForFontWithFamilyName:(NSString*)family italic:(BOOL)italic bold:(BOOL)bold;
++ (void) registerFontWithName:(NSString*)fontName withFamilyName:(NSString*)family italic:(BOOL)italic bold:(BOOL)bold monospace:(BOOL)monospace;
++ (NSString*) fontNameForFontWithFamilyName:(NSString*)family italic:(BOOL)italic bold:(BOOL)bold monospace:(BOOL)monospace;
 
 @end

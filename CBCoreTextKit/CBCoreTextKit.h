@@ -22,4 +22,6 @@
 #import "NSAttributedString+HTML.h"
 #import "NSAttributedString+DokuWiki.h"
 
+#import "CBCTKFontManager.h"
+
 #import "CBCTKMarkdownParser.h"

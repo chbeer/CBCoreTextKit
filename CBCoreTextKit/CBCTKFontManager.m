@@ -19,28 +19,20 @@
     return fontDescriptors;
 }
 
-+ (NSString*) keyForFontWithFamilyName:(NSString*)family italic:(BOOL)italic bold:(BOOL)bold
++ (NSString*) keyForFontWithFamilyName:(NSString*)family italic:(BOOL)italic bold:(BOOL)bold monospace:(BOOL)monospace
 {
-    return [NSString stringWithFormat:@"%@#%c%c", family, bold ? 'b' : '-', italic ? 'i' : '-'];
+    return [NSString stringWithFormat:@"%@#%c%c%c", family, bold ? 'b' : '-', italic ? 'i' : '-', monospace ? 'm' : '-'];
 }
 
-+ (void) registerFontWithName:(NSString*)fontName withFamilyName:(NSString*)family italic:(BOOL)italic bold:(BOOL)bold
++ (void) registerFontWithName:(NSString*)fontName withFamilyName:(NSString*)family italic:(BOOL)italic bold:(BOOL)bold monospace:(BOOL)monospace
 {
-    NSString *key = [self keyForFontWithFamilyName:family italic:italic bold:bold];
+    NSString *key = [self keyForFontWithFamilyName:family italic:italic bold:bold monospace:monospace];
     [[self fontDescriptors] setObject:fontName forKey:key];
 }
 
-+ (void) loadFontMappingFromPlistAtURL:(NSURL*)url
++ (NSString*) fontNameForFontWithFamilyName:(NSString *)family italic:(BOOL)italic bold:(BOOL)bold monospace:(BOOL)monospace
 {
-    NSArray *fonts = [NSArray arrayWithContentsOfURL:url];
-    
-    for (NSDictionary *font in fonts) {
-        NSString *name = [font objectForKey:@"name"];
-        NSString *fontName = [font objectForKey:@"fontName"];
-        NSString *boldFontName = [font objectForKey:@"boldFontName"];
-        NSString *italicFontName = [font objectForKey:@"italicFontName"];
-        
-    }
+    return [[self fontDescriptors] objectForKey:[self keyForFontWithFamilyName:family italic:italic bold:bold monospace:monospace]];
 }
 
 @end
