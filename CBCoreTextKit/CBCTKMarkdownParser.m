@@ -60,7 +60,7 @@
 - (void) registerDefaultFormatPatterns
 {
     [self registerFormatPatternWithRegularExpression:[[self class] markdownRegularExpressionForStrong]
-                                             handler:^NSAttributedString*(NSTextCheckingResult *result, NSString *markdownString, NSRange *replacementRange) {
+                                             handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
                                                  NSRange textRange = [result rangeAtIndex:2];
                                                  NSString *string = [markdownString substringWithRange:textRange];
                                                  NSAttributedString *resultString = [NSAttributedString attributedStringWithString:string
@@ -70,7 +70,7 @@
                                                  return resultString;
                                              }];
     [self registerFormatPatternWithRegularExpression:[[self class] markdownRegularExpressionForEm]
-                                             handler:^NSAttributedString*(NSTextCheckingResult *result, NSString *markdownString, NSRange *replacementRange) {
+                                             handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
                                                  NSRange textRange = [result rangeAtIndex:2];
                                                  NSString *string = [markdownString substringWithRange:textRange];
                                                  NSAttributedString *resultString = [NSAttributedString attributedStringWithString:string
@@ -97,7 +97,7 @@
         NSArray *matches = [pattern.regularExpression matchesInString:string options:0 range:NSMakeRange(0, string.length)];
         for (NSTextCheckingResult *match in [matches reverseObjectEnumerator]) {
             NSRange replacementRange = match.range;
-            NSAttributedString *formatted = pattern.handler(match, string, &replacementRange);
+            NSAttributedString *formatted = pattern.handler(match, result, string, &replacementRange);
             if (formatted) {
                 [result replaceCharactersInRange:replacementRange withAttributedString:formatted];
             }

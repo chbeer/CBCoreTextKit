@@ -11,7 +11,7 @@
 #import "CBCTKGlobals.h"
 
 
-typedef NSAttributedString*(^CBCTKMarkdownFormatHandler)(NSTextCheckingResult *result, NSString *markdownString, NSRange *replacementRange);
+typedef NSAttributedString*(^CBCTKMarkdownFormatHandler)(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange);
 
 @interface CBCTKMarkdownParser : NSObject
 
