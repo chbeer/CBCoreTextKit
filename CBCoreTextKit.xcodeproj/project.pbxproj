@@ -16,6 +16,8 @@
 		AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC615F81CA700FD7A19 /* NSAttributedString+DokuWiki.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7A976516BA3C1A009878C7 /* NSAttributedString+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A976316BA3C1A009878C7 /* NSAttributedString+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7A976716BA3C1A009878C7 /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */; };
 		AA7D3551166F2851006FCCA5 /* CBCTKMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9C9163164DA0EE00F75427 /* CBCTKMarkdownParser.m */; };
 		AA91A4F8162A27AE00B5F20F /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
 		AA91A4F9162A27B600B5F20F /* NSAttributedString+CBCoreTextKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBCoreTextKit.m */; };
@@ -86,6 +88,8 @@
 		AA6CCAB215F81C9600FD7A19 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		AA6CCAB315F81C9600FD7A19 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AA6CCAB415F81C9600FD7A19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AA7A976316BA3C1A009878C7 /* NSAttributedString+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+UIKit.h"; sourceTree = "<group>"; };
+		AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+UIKit.m"; sourceTree = "<group>"; };
 		AA9C9162164DA0EE00F75427 /* CBCTKMarkdownParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = CBCTKMarkdownParser.h; sourceTree = "<group>"; };
 		AA9C9163164DA0EE00F75427 /* CBCTKMarkdownParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCTKMarkdownParser.m; sourceTree = "<group>"; };
 		AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCTKGlobals.h; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 				AACA2E8916311367006D28C6 /* NSAttributedString+HTML.m */,
 				AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */,
 				AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */,
+				AA7A976316BA3C1A009878C7 /* NSAttributedString+UIKit.h */,
+				AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */,
 			);
 			name = "Attributed String";
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				AACA2E90163113E3006D28C6 /* NSAttributedString+Glyphs.h in Headers */,
 				AA9C9164164DA0EF00F75427 /* CBCTKMarkdownParser.h in Headers */,
 				AA512C54164A365A00E497FE /* CBCTKFontManager.h in Headers */,
+				AA7A976516BA3C1A009878C7 /* NSAttributedString+UIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +455,7 @@
 				AACA2E92163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */,
 				AA512C56164A365A00E497FE /* CBCTKFontManager.m in Sources */,
 				AA9C9166164DA0EF00F75427 /* CBCTKMarkdownParser.m in Sources */,
+				AA7A976716BA3C1A009878C7 /* NSAttributedString+UIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

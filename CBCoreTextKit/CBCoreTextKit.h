@@ -25,3 +25,10 @@
 #import "CBCTKFontManager.h"
 
 #import "CBCTKMarkdownParser.h"
+
+
+#if TARGET_OS_IPHONE
+
+#import "NSAttributedString+UIKit.h"
+
+#endif

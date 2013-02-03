@@ -254,38 +254,6 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
     return [self attributedStringWithString:string fontName:fontName fontSize:fontSize underline:underline textColor:textColor paragraphAttributes:kCBNSParagraphAttributesZero additionalAttributes:nil];
 }
 
-
-+ (NSDictionary*) attributesDictionaryConvertedToNSAttributes:(NSDictionary*)dict
-{
-    NSMutableDictionary *mutable = [dict mutableCopy];
-    
-    for (NSString *key in [mutable allKeys]) {
-        
-        id value = [mutable objectForKey:key];
-        
-        NSLog(@"value: %@ (%@)", value, NSStringFromClass([value class]));
-        
-    }
-    
-    return mutable;
-}
-
-
-- (id) copyWithNSAttributes;
-{
-    NSMutableAttributedString *mutable = [self mutableCopy];
-    
-    [mutable enumerateAttributesInRange:NSMakeRange(0, mutable.length)
-                                options:0
-                             usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop) {
-                                 NSDictionary *converted = [[self class] attributesDictionaryConvertedToNSAttributes:attrs];
-                                 [mutable setAttributes:converted range:range];
-                             }];
-    
-    return mutable;
-}
-
-
 @end
 
 

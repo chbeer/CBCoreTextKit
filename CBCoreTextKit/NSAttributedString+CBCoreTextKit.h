@@ -56,8 +56,6 @@ extern CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNS
 + (id) attributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize
                         underline:(BOOL)underline textColor:(CBColor*)textColor;
 
-- (id) copyWithNSAttributes;
-
 @end
 
 @interface NSMutableAttributedString (CBUIKit)
