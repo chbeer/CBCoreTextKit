@@ -32,7 +32,7 @@ typedef struct {
     CTWritingDirection baseWritingDirection;
 } CBNSAttributedStringParagraphAttributes;
 
-extern const CBNSAttributedStringParagraphAttributes kCBNSDefaultParagraphAttributes;
+extern const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesDefault;
 extern const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesZero;
 
 extern CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttributedStringParagraphAttributes paragraphAttributes);
