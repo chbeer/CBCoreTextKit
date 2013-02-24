@@ -9,6 +9,7 @@
 #import "CBCTKMarkdownParser.h"
 
 #import "NSAttributedString+CBCoreTextKit.h"
+#import "CBCTKFontManager.h"
 
 
 
@@ -62,21 +63,25 @@
     [self registerFormatPatternWithRegularExpression:[[self class] markdownRegularExpressionForStrong]
                                              handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
                                                  NSRange textRange = [result rangeAtIndex:2];
-                                                 NSString *string = [markdownString substringWithRange:textRange];
-                                                 NSAttributedString *resultString = [NSAttributedString attributedStringWithString:string
-                                                                                                                    fontFamilyName:self.fontFamilyName
-                                                                                                                          fontSize:self.fontSize
-                                                                                                                    fontAttributes:(CBNSAttributedStringFontAttributes){.bold = YES}];
+                                                 
+                                                 CTFontRef font = [CBCTKFontManager fontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                                                                        fontAttributes:(CBCTKFontAttributes){.bold = YES}];
+                                                 
+                                                 NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
+                                                 [resultString addAttribute:(id)kCTFontAttributeName value:(__bridge id)font range:NSMakeRange(0, resultString.length)];
+                                                 
                                                  return resultString;
                                              }];
     [self registerFormatPatternWithRegularExpression:[[self class] markdownRegularExpressionForEm]
                                              handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
                                                  NSRange textRange = [result rangeAtIndex:2];
-                                                 NSString *string = [markdownString substringWithRange:textRange];
-                                                 NSAttributedString *resultString = [NSAttributedString attributedStringWithString:string
-                                                                                                                    fontFamilyName:self.fontFamilyName
-                                                                                                                          fontSize:self.fontSize
-                                                                                                                    fontAttributes:(CBNSAttributedStringFontAttributes){.italic = YES}];
+                                                 
+                                                 CTFontRef font = [CBCTKFontManager fontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                                                                        fontAttributes:(CBCTKFontAttributes){.italic = YES}];
+                                                 
+                                                 NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
+                                                 [resultString addAttribute:(id)kCTFontAttributeName value:(__bridge id)font range:NSMakeRange(0, resultString.length)];
+
                                                  return resultString;
                                              }];
 }
@@ -89,7 +94,7 @@
     
     NSMutableAttributedString *result = [NSMutableAttributedString attributedStringWithString:string
                                                                                fontFamilyName:self.fontFamilyName fontSize:self.fontSize
-                                                                               fontAttributes:(CBNSAttributedStringFontAttributes){.textColor = self.textColor.CGColor}];
+                                                                               fontAttributes:(CBCTKFontAttributes){.textColor = self.textColor.CGColor}];
     
     for (CBCTKMarkdownFormatPattern *pattern in self.formatPatterns) {
         NSString *string = [result string];
