@@ -19,7 +19,7 @@
     NSMutableAttributedString *result = [[NSMutableAttributedString alloc] init];
     
     NSString *scanned = nil;
-    CBNSAttributedStringFontAttributes attributes = {NO, NO, NO, NO};
+    CBCTKFontAttributes attributes = {NO, NO, NO, NO};
     BOOL found = YES;
     while (![scanner isAtEnd] && found) {
         found = NO;

@@ -38,7 +38,7 @@
     
     NSCharacterSet *dokuWikiBasicSyntaxCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@"*/_'"];
     
-    CBNSAttributedStringFontAttributes attributes = {NO, NO, NO, NO};
+    CBCTKFontAttributes attributes = {NO, NO, NO, NO};
     
     NSString *temp = nil;
     while (![scanner isAtEnd]) {

@@ -65,4 +65,44 @@
     return [[self fontDescriptors] objectForKey:[self keyForFontWithFamilyName:family italic:italic bold:bold monospace:monospace]];
 }
 
+
++ (CTFontRef) fontWithFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
+                  fontAttributes:(CBCTKFontAttributes)fontAttributes
+{
+    CTFontRef font;
+    
+    NSString *fontName = [CBCTKFontManager fontNameForFontWithFamilyName:fontFamily italic:fontAttributes.italic bold:fontAttributes.bold monospace:fontAttributes.monospace];
+    if (fontName) {
+        
+        font = CTFontCreateWithName((__bridge CFStringRef)fontName, fontSize, NULL);
+        
+    } else {
+        CTFontSymbolicTraits traits = 0;
+        if (fontAttributes.bold)
+        {
+            traits |= kCTFontBoldTrait;
+        }
+        if (fontAttributes.italic)
+        {
+            traits |= kCTFontItalicTrait;
+        }
+        if (fontAttributes.monospace)
+        {
+            traits |= kCTFontMonoSpaceTrait;
+        }
+        
+        NSDictionary *fontAttr = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  fontFamily, kCTFontFamilyNameAttribute,
+                                  [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:traits]
+                                                              forKey:(id)kCTFontSymbolicTrait], kCTFontTraitsAttribute,
+                                  nil];
+        
+        CTFontDescriptorRef descriptor = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)fontAttr);
+        font = CTFontCreateWithFontDescriptor(descriptor, fontSize, NULL);
+        CFRelease(descriptor);
+    }
+    
+    return font;
+}
+
 @end

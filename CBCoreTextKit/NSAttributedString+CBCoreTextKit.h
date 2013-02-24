@@ -11,42 +11,18 @@
 #import "CBCTKGlobals.h"
 
 
-typedef struct {
-    BOOL bold, italic, underline, monospace;
-    CGColorRef textColor;
-} CBNSAttributedStringFontAttributes;
-
-typedef struct {
-    CTTextAlignment alignment;
-    CGFloat firstLineHeadIndent;
-    CGFloat headIndent;
-    CGFloat tailIndent;
-    CGFloat defaultTabInterval;
-    CTLineBreakMode lineBreakMode;
-    CGFloat lineHeightMultiple;
-    CGFloat maximumLineHeight;
-    CGFloat minimumLineHeight;
-    CGFloat lineSpacing;
-    CGFloat paragraphSpacing;
-    CGFloat paragraphSpacingBefore;
-    CTWritingDirection baseWritingDirection;
-} CBNSAttributedStringParagraphAttributes;
-
-extern const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesDefault;
-extern const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesZero;
-
 extern CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttributedStringParagraphAttributes paragraphAttributes);
 
 
 @interface NSAttributedString (CBUIKit)
 
 + (id) attributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
-                   fontAttributes:(CBNSAttributedStringFontAttributes)fontAttributes paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
+                   fontAttributes:(CBCTKFontAttributes)fontAttributes paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
              additionalAttributes:(NSDictionary*)additionalAttributes;
 + (id) attributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
-                   fontAttributes:(CBNSAttributedStringFontAttributes)fontAttributes paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes;
+                   fontAttributes:(CBCTKFontAttributes)fontAttributes paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes;
 + (id) attributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
-                   fontAttributes:(CBNSAttributedStringFontAttributes)fontAttributes;
+                   fontAttributes:(CBCTKFontAttributes)fontAttributes;
 
 + (id) attributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize
                         underline:(BOOL)underline textColor:(CBColor*)textColor paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
@@ -60,12 +36,12 @@ extern CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNS
 
 @interface NSMutableAttributedString (CBUIKit)
 
-- (void) appendAttributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize fontAttributes:(CBNSAttributedStringFontAttributes)attributes
+- (void) appendAttributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize fontAttributes:(CBCTKFontAttributes)attributes
                       paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
                      additionalAttributes:(NSDictionary*)additionalAttributes;
-- (void) appendAttributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize fontAttributes:(CBNSAttributedStringFontAttributes)attributes
+- (void) appendAttributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize fontAttributes:(CBCTKFontAttributes)attributes
                       paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes;
-- (void) appendAttributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize fontAttributes:(CBNSAttributedStringFontAttributes)attributes;
+- (void) appendAttributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize fontAttributes:(CBCTKFontAttributes)attributes;
 
 - (void) appendAttributedStringWithString:(NSString*)string fontName:(NSString*)fontName fontSize:(CGFloat)fontSize underline:(BOOL)underline textColor:(CBColor*)textColor
                       paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
