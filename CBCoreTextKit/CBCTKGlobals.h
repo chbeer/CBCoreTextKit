@@ -48,3 +48,5 @@ extern const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesZer
 
 BOOL CBNSAttributedStringParagraphAttributesEqual(CBNSAttributedStringParagraphAttributes a, CBNSAttributedStringParagraphAttributes b);
 BOOL CBNSAttributedStringParagraphAttributesZero(CBNSAttributedStringParagraphAttributes a);
+
+NSParagraphStyle *CBNSParagraphStyleWithAttributes(CBNSAttributedStringParagraphAttributes attr);
