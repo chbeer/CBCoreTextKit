@@ -47,7 +47,9 @@
             // intentionally do nothing because it's clean
             
         } else {
+#ifdef DEBUG
             NSLog(@"value: %@ (%@)", value, NSStringFromClass([value class]));
+#endif
         }
         
         
