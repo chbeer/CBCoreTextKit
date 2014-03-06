@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#if TARGET_OS_IPHONE
+#import <CoreText/CoreText.h>
+#endif
+
+
 extern NSParagraphStyle *CBCTKNSParagraphStyleFromCTParagraphStyle(CTParagraphStyleRef ctParagraphStyle);
 
 @interface NSAttributedString (CBCTK_UIKit)
