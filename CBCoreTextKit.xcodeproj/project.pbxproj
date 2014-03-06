@@ -614,7 +614,6 @@
 				DSTROOT = /tmp/CBCoreTextKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBCoreTextKit/CBCoreTextKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "./Libraries/discount-config";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = CBCoreTextKit;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)";
@@ -629,7 +628,6 @@
 				DSTROOT = /tmp/CBCoreTextKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBCoreTextKit/CBCoreTextKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "./Libraries/discount-config";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = CBCoreTextKit;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)";

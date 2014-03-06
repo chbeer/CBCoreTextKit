@@ -10,8 +10,12 @@
 
 
 #if TARGET_OS_IPHONE
+
+#import <CoreText/CoreText.h>
+
 typedef UIColor CBColor;
 typedef UIFont  CBFont;
+
 #else
 
 #import <AppKit/AppKit.h>
