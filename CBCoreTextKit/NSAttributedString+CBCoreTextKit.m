@@ -82,7 +82,7 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
     /// ---  FONT ---
     
     NSMutableDictionary *attr = [NSMutableDictionary dictionary];
-    [attr setObject:(__bridge id)[CBCTKFontManager fontWithFamilyName:fontFamily fontSize:fontSize fontAttributes:fontAttributes]
+    [attr setObject:(__bridge id)[CBCTKFontManager createFontWithFamilyName:fontFamily fontSize:fontSize fontAttributes:fontAttributes]
              forKey:(id)kCTFontAttributeName];
     
     if (fontAttributes.underline) {

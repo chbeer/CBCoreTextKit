@@ -66,7 +66,7 @@
 }
 
 
-+ (CTFontRef) fontWithFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
++ (CTFontRef) createFontWithFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
                   fontAttributes:(CBCTKFontAttributes)fontAttributes
 {
     CTFontRef font;
