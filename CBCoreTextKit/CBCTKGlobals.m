@@ -49,7 +49,7 @@ NSParagraphStyle *CBNSParagraphStyleWithAttributes(CBNSAttributedStringParagraph
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     
     if (paragraphAttributes.alignment != 0 && paragraphAttributes.alignment != kCTNaturalTextAlignment) {
-        style.alignment = paragraphAttributes.alignment;
+        style.alignment = (NSTextAlignment)paragraphAttributes.alignment;
     }
     if (paragraphAttributes.firstLineHeadIndent != 0.0) {
         style.firstLineHeadIndent = paragraphAttributes.firstLineHeadIndent;
@@ -64,7 +64,7 @@ NSParagraphStyle *CBNSParagraphStyleWithAttributes(CBNSAttributedStringParagraph
         style.defaultTabInterval = paragraphAttributes.defaultTabInterval;
     }
     if (paragraphAttributes.lineBreakMode != kCTLineBreakByWordWrapping) {
-        style.lineBreakMode = paragraphAttributes.lineBreakMode;
+        style.lineBreakMode = (NSLineBreakMode)paragraphAttributes.lineBreakMode;
     }
     if (paragraphAttributes.lineHeightMultiple != 0.0) {
         style.lineHeightMultiple = paragraphAttributes.lineHeightMultiple;
@@ -85,7 +85,7 @@ NSParagraphStyle *CBNSParagraphStyleWithAttributes(CBNSAttributedStringParagraph
         style.paragraphSpacingBefore = paragraphAttributes.paragraphSpacingBefore;
     }
     if (paragraphAttributes.baseWritingDirection != 0.0) {
-        style.baseWritingDirection = paragraphAttributes.baseWritingDirection;
+        style.baseWritingDirection = (NSWritingDirection)paragraphAttributes.baseWritingDirection;
     }
     
     return style;

@@ -104,7 +104,7 @@ NSParagraphStyle *CBCTKNSParagraphStyleFromCTParagraphStyle(CTParagraphStyleRef 
 
     CTWritingDirection baseWritingDirection;
     CTParagraphStyleGetValueForSpecifier(ctParagraphStyle, kCTParagraphStyleSpecifierBaseWritingDirection, sizeof(baseWritingDirection), &baseWritingDirection);
-    paragraphStyle.baseWritingDirection = baseWritingDirection;
+    paragraphStyle.baseWritingDirection = (NSWritingDirection)baseWritingDirection;
     
     CGFloat minimumLineHeight, maximumLineHeight;
     CTParagraphStyleGetValueForSpecifier(ctParagraphStyle, kCTParagraphStyleSpecifierMinimumLineHeight, sizeof(minimumLineHeight), &minimumLineHeight);
