@@ -81,6 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA2EFBB71B5E456E00B11E96 /* CBCoreTextKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CBCoreTextKit.podspec; sourceTree = "<group>"; };
 		AA512C52164A365A00E497FE /* CBCTKFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCTKFontManager.h; sourceTree = "<group>"; };
 		AA512C53164A365A00E497FE /* CBCTKFontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCTKFontManager.m; sourceTree = "<group>"; };
 		AA6CCAAE15F81C9600FD7A19 /* CBCoreTextKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCoreTextKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +192,7 @@
 		AAC3417C15F516B600217914 = {
 			isa = PBXGroup;
 			children = (
+				AA2EFBB71B5E456E00B11E96 /* CBCoreTextKit.podspec */,
 				AAC3418C15F516B600217914 /* CBCoreTextKit */,
 				AABE57B1164519EE00F7CF5B /* CBCoreTextKitTest */,
 				AAC3418915F516B600217914 /* Frameworks */,
@@ -333,7 +335,7 @@
 			name = CBCoreTextKitTest;
 			productName = CBCoreTextKitTest;
 			productReference = AABE57AB164519ED00F7CF5B /* CBCoreTextKitTest.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		AAC3418615F516B600217914 /* libCBCoreTextKit */ = {
 			isa = PBXNativeTarget;
