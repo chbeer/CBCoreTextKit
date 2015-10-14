@@ -73,6 +73,8 @@
 		AAEF3A2A1BCF0D560000509E /* NSAttributedString+Glyphs.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2E8E163113E3006D28C6 /* NSAttributedString+Glyphs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF3A2B1BCF0D560000509E /* CBCTKMarkdownParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9C9162164DA0EE00F75427 /* CBCTKMarkdownParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF3A2C1BCF0D560000509E /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A341BCF0E5F0000509E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEF3A331BCF0E5F0000509E /* UIKit.framework */; };
+		AAEF3A351BCF0E660000509E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */; };
 		AAF4EB0F15FE0B56003D1E51 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +138,7 @@
 		AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Glyphs.m"; sourceTree = "<group>"; };
 		AAEF3A151BCF0CCE0000509E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		AAEF3A311BCF0D560000509E /* CBCoreTextKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCoreTextKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEF3A331BCF0E5F0000509E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -172,6 +175,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEF3A351BCF0E660000509E /* CoreText.framework in Frameworks */,
+				AAEF3A341BCF0E5F0000509E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +247,7 @@
 		AAC3418915F516B600217914 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAEF3A331BCF0E5F0000509E /* UIKit.framework */,
 				AAEF3A151BCF0CCE0000509E /* Cocoa.framework */,
 				AAC3418A15F516B600217914 /* Foundation.framework */,
 				AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */,
@@ -743,6 +749,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.chbeer.ios.CBCoreTextKit;
@@ -768,6 +775,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = de.chbeer.ios.CBCoreTextKit;
 				PRODUCT_NAME = CBCoreTextKit;
