@@ -54,6 +54,8 @@
 		AACA2E91163113E3006D28C6 /* NSAttributedString+Glyphs.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2E8E163113E3006D28C6 /* NSAttributedString+Glyphs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AACA2E92163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
 		AACA2E93163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
+		AAEF39CA1BCF04D60000509E /* NSAttributedString+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A976316BA3C1A009878C7 /* NSAttributedString+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF39CB1BCF04E60000509E /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */; settings = {ASSET_TAGS = (); }; };
 		AAF4EB0F15FE0B56003D1E51 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -271,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6CCAC215F81CA700FD7A19 /* CBCoreTextKit.h in Headers */,
+				AAEF39CA1BCF04D60000509E /* NSAttributedString+UIKit.h in Headers */,
 				AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */,
 				AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBCoreTextKit.h in Headers */,
 				AA6CCAC615F81CA700FD7A19 /* NSAttributedString+DokuWiki.h in Headers */,
@@ -428,6 +431,7 @@
 				AACA2E8D16311367006D28C6 /* NSAttributedString+HTML.m in Sources */,
 				AACA2E93163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */,
 				AA512C57164A365A00E497FE /* CBCTKFontManager.m in Sources */,
+				AAEF39CB1BCF04E60000509E /* NSAttributedString+UIKit.m in Sources */,
 				AA9C9167164DA0EF00F75427 /* CBCTKMarkdownParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
