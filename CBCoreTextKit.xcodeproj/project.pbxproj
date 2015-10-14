@@ -11,7 +11,6 @@
 		AA512C55164A365A00E497FE /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA512C56164A365A00E497FE /* CBCTKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA512C53164A365A00E497FE /* CBCTKFontManager.m */; };
 		AA512C57164A365A00E497FE /* CBCTKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA512C53164A365A00E497FE /* CBCTKFontManager.m */; };
-		AA6CCAB015F81C9600FD7A19 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6CCAAF15F81C9600FD7A19 /* Cocoa.framework */; };
 		AA6CCAC215F81CA700FD7A19 /* CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC315F81CA700FD7A19 /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA6CCAC515F81CA700FD7A19 /* NSAttributedString+CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +55,24 @@
 		AACA2E93163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
 		AAEF39CA1BCF04D60000509E /* NSAttributedString+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A976316BA3C1A009878C7 /* NSAttributedString+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF39CB1BCF04E60000509E /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */; settings = {ASSET_TAGS = (); }; };
+		AAEF3A161BCF0CCE0000509E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEF3A151BCF0CCE0000509E /* Cocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AAEF3A191BCF0D560000509E /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
+		AAEF3A1A1BCF0D560000509E /* NSAttributedString+CBCoreTextKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBCoreTextKit.m */; };
+		AAEF3A1B1BCF0D560000509E /* NSAttributedString+DokuWiki.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC341A115F5172F00217914 /* NSAttributedString+DokuWiki.m */; };
+		AAEF3A1C1BCF0D560000509E /* NSAttributedString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8916311367006D28C6 /* NSAttributedString+HTML.m */; };
+		AAEF3A1D1BCF0D560000509E /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
+		AAEF3A1E1BCF0D560000509E /* CBCTKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA512C53164A365A00E497FE /* CBCTKFontManager.m */; };
+		AAEF3A1F1BCF0D560000509E /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */; settings = {ASSET_TAGS = (); }; };
+		AAEF3A201BCF0D560000509E /* CBCTKMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9C9163164DA0EE00F75427 /* CBCTKMarkdownParser.m */; };
+		AAEF3A241BCF0D560000509E /* CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A251BCF0D560000509E /* NSAttributedString+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A976316BA3C1A009878C7 /* NSAttributedString+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A261BCF0D560000509E /* CBCTKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA5A50B15F74AAB002725C5 /* CBCTKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A271BCF0D560000509E /* NSAttributedString+CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3419E15F5172F00217914 /* NSAttributedString+CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A281BCF0D560000509E /* NSAttributedString+DokuWiki.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC341A015F5172F00217914 /* NSAttributedString+DokuWiki.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A291BCF0D560000509E /* NSAttributedString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2E8816311367006D28C6 /* NSAttributedString+HTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A2A1BCF0D560000509E /* NSAttributedString+Glyphs.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2E8E163113E3006D28C6 /* NSAttributedString+Glyphs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A2B1BCF0D560000509E /* CBCTKMarkdownParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9C9162164DA0EE00F75427 /* CBCTKMarkdownParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEF3A2C1BCF0D560000509E /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAF4EB0F15FE0B56003D1E51 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +134,8 @@
 		AACA2E8916311367006D28C6 /* NSAttributedString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HTML.m"; sourceTree = "<group>"; };
 		AACA2E8E163113E3006D28C6 /* NSAttributedString+Glyphs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Glyphs.h"; sourceTree = "<group>"; };
 		AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Glyphs.m"; sourceTree = "<group>"; };
+		AAEF3A151BCF0CCE0000509E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		AAEF3A311BCF0D560000509E /* CBCoreTextKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCoreTextKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -125,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA6CCAB015F81C9600FD7A19 /* Cocoa.framework in Frameworks */,
+				AAEF3A161BCF0CCE0000509E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +165,13 @@
 			files = (
 				AAF4EB0F15FE0B56003D1E51 /* CoreText.framework in Frameworks */,
 				AAC3418B15F516B600217914 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAEF3A211BCF0D560000509E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +234,7 @@
 				AAC3418715F516B600217914 /* libCBCoreTextKit.a */,
 				AA6CCAAE15F81C9600FD7A19 /* CBCoreTextKit.framework */,
 				AABE57AB164519ED00F7CF5B /* CBCoreTextKitTest.octest */,
+				AAEF3A311BCF0D560000509E /* CBCoreTextKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +242,7 @@
 		AAC3418915F516B600217914 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAEF3A151BCF0CCE0000509E /* Cocoa.framework */,
 				AAC3418A15F516B600217914 /* Foundation.framework */,
 				AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */,
 				AA6CCAAF15F81C9600FD7A19 /* Cocoa.framework */,
@@ -300,12 +328,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AAEF3A231BCF0D560000509E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEF3A241BCF0D560000509E /* CBCoreTextKit.h in Headers */,
+				AAEF3A251BCF0D560000509E /* NSAttributedString+UIKit.h in Headers */,
+				AAEF3A261BCF0D560000509E /* CBCTKGlobals.h in Headers */,
+				AAEF3A271BCF0D560000509E /* NSAttributedString+CBCoreTextKit.h in Headers */,
+				AAEF3A281BCF0D560000509E /* NSAttributedString+DokuWiki.h in Headers */,
+				AAEF3A291BCF0D560000509E /* NSAttributedString+HTML.h in Headers */,
+				AAEF3A2A1BCF0D560000509E /* NSAttributedString+Glyphs.h in Headers */,
+				AAEF3A2B1BCF0D560000509E /* CBCTKMarkdownParser.h in Headers */,
+				AAEF3A2C1BCF0D560000509E /* CBCTKFontManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AA6CCAAD15F81C9600FD7A19 /* CBCoreTextKit */ = {
+		AA6CCAAD15F81C9600FD7A19 /* CBCoreTextKit OS X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA6CCABF15F81C9600FD7A19 /* Build configuration list for PBXNativeTarget "CBCoreTextKit" */;
+			buildConfigurationList = AA6CCABF15F81C9600FD7A19 /* Build configuration list for PBXNativeTarget "CBCoreTextKit OS X" */;
 			buildPhases = (
 				AA6CCAA915F81C9600FD7A19 /* Sources */,
 				AA6CCAAA15F81C9600FD7A19 /* Frameworks */,
@@ -316,7 +360,7 @@
 			);
 			dependencies = (
 			);
-			name = CBCoreTextKit;
+			name = "CBCoreTextKit OS X";
 			productName = CBCoreTextKit;
 			productReference = AA6CCAAE15F81C9600FD7A19 /* CBCoreTextKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -358,6 +402,24 @@
 			productReference = AAC3418715F516B600217914 /* libCBCoreTextKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		AAEF3A171BCF0D560000509E /* CBCoreTextKit iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAEF3A2E1BCF0D560000509E /* Build configuration list for PBXNativeTarget "CBCoreTextKit iOS" */;
+			buildPhases = (
+				AAEF3A181BCF0D560000509E /* Sources */,
+				AAEF3A211BCF0D560000509E /* Frameworks */,
+				AAEF3A231BCF0D560000509E /* Headers */,
+				AAEF3A2D1BCF0D560000509E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CBCoreTextKit iOS";
+			productName = CBCoreTextKit;
+			productReference = AAEF3A311BCF0D560000509E /* CBCoreTextKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -380,7 +442,8 @@
 			projectRoot = "";
 			targets = (
 				AAC3418615F516B600217914 /* libCBCoreTextKit */,
-				AA6CCAAD15F81C9600FD7A19 /* CBCoreTextKit */,
+				AA6CCAAD15F81C9600FD7A19 /* CBCoreTextKit OS X */,
+				AAEF3A171BCF0D560000509E /* CBCoreTextKit iOS */,
 				AABE57AA164519ED00F7CF5B /* CBCoreTextKitTest */,
 			);
 		};
@@ -399,6 +462,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AABE57B6164519EE00F7CF5B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAEF3A2D1BCF0D560000509E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +535,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AAEF3A181BCF0D560000509E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEF3A191BCF0D560000509E /* CBCTKGlobals.m in Sources */,
+				AAEF3A1A1BCF0D560000509E /* NSAttributedString+CBCoreTextKit.m in Sources */,
+				AAEF3A1B1BCF0D560000509E /* NSAttributedString+DokuWiki.m in Sources */,
+				AAEF3A1C1BCF0D560000509E /* NSAttributedString+HTML.m in Sources */,
+				AAEF3A1D1BCF0D560000509E /* NSAttributedString+Glyphs.m in Sources */,
+				AAEF3A1E1BCF0D560000509E /* CBCTKFontManager.m in Sources */,
+				AAEF3A1F1BCF0D560000509E /* NSAttributedString+UIKit.m in Sources */,
+				AAEF3A201BCF0D560000509E /* CBCTKMarkdownParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -502,10 +587,11 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.chbeer.osx.CBCoreTextKit;
+				PRODUCT_NAME = CBCoreTextKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SUPPORTED_PLATFORMS = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -525,10 +611,11 @@
 				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.chbeer.osx.CBCoreTextKit;
+				PRODUCT_NAME = CBCoreTextKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SUPPORTED_PLATFORMS = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -643,10 +730,58 @@
 			};
 			name = Release;
 		};
+		AAEF3A2F1BCF0D560000509E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CBCoreTextKit/CBCoreTextKit-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = de.chbeer.ios.CBCoreTextKit;
+				PRODUCT_NAME = CBCoreTextKit;
+				SDKROOT = iphoneos9.0;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		AAEF3A301BCF0D560000509E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CBCoreTextKit/CBCoreTextKit-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = de.chbeer.ios.CBCoreTextKit;
+				PRODUCT_NAME = CBCoreTextKit;
+				SDKROOT = iphoneos9.0;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA6CCABF15F81C9600FD7A19 /* Build configuration list for PBXNativeTarget "CBCoreTextKit" */ = {
+		AA6CCABF15F81C9600FD7A19 /* Build configuration list for PBXNativeTarget "CBCoreTextKit OS X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA6CCAC015F81C9600FD7A19 /* Debug */,
@@ -678,6 +813,15 @@
 			buildConfigurations = (
 				AAC3419615F516B600217914 /* Debug */,
 				AAC3419715F516B600217914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAEF3A2E1BCF0D560000509E /* Build configuration list for PBXNativeTarget "CBCoreTextKit iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAEF3A2F1BCF0D560000509E /* Debug */,
+				AAEF3A301BCF0D560000509E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

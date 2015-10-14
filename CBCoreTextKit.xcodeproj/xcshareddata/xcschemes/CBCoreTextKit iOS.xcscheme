@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA6CCAAD15F81C9600FD7A19"
-               BuildableName = "CBCoreTextKit.framework"
-               BlueprintName = "CBCoreTextKit OS X"
+               BlueprintIdentifier = "AAEF3A171BCF0D560000509E"
+               BuildableName = "CBCoreTextKit iOS.framework"
+               BlueprintName = "CBCoreTextKit iOS"
                ReferencedContainer = "container:CBCoreTextKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA6CCAAD15F81C9600FD7A19"
-            BuildableName = "CBCoreTextKit.framework"
-            BlueprintName = "CBCoreTextKit OS X"
+            BlueprintIdentifier = "AAEF3A171BCF0D560000509E"
+            BuildableName = "CBCoreTextKit iOS.framework"
+            BlueprintName = "CBCoreTextKit iOS"
             ReferencedContainer = "container:CBCoreTextKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AAEF3A171BCF0D560000509E"
+            BuildableName = "CBCoreTextKit iOS.framework"
+            BlueprintName = "CBCoreTextKit iOS"
+            ReferencedContainer = "container:CBCoreTextKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
