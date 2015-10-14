@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Christian Beer. All rights reserved.
 //
 
+#if TARGET_OS_IPHONE
+
 #import <Foundation/Foundation.h>
 
-#if TARGET_OS_IPHONE
 #import <CoreText/CoreText.h>
-#endif
 
 
 extern NSParagraphStyle *CBCTKNSParagraphStyleFromCTParagraphStyle(CTParagraphStyleRef ctParagraphStyle);
@@ -20,3 +20,5 @@ extern NSParagraphStyle *CBCTKNSParagraphStyleFromCTParagraphStyle(CTParagraphSt
 - (NSAttributedString*) copyWithUIKitAttributes;
 
 @end
+
+#endif

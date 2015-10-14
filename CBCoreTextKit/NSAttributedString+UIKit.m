@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Christian Beer. All rights reserved.
 //
 
+#if TARGET_OS_IPHONE
+
 #import "NSAttributedString+UIKit.h"
 
 @implementation NSAttributedString (CBCTK_UIKit)
@@ -120,3 +122,5 @@ NSParagraphStyle *CBCTKNSParagraphStyleFromCTParagraphStyle(CTParagraphStyleRef 
 }
 
 @end
+
+#endif
