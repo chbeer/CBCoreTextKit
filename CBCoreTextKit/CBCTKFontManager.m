@@ -8,6 +8,9 @@
 
 #import "CBCTKFontManager.h"
 
+static NSString * const kCBCTKFontManagerSystemFontName = @"-system";
+
+
 @implementation CBCTKFontManager
 
 + (NSMutableDictionary*) fontDescriptors
@@ -67,11 +70,26 @@
 
 
 + (CTFontRef) createFontWithFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
-                  fontAttributes:(CBCTKFontAttributes)fontAttributes
+                        fontAttributes:(CBCTKFontAttributes)fontAttributes
 {
     CTFontRef font;
+    NSString *fontName = nil;
     
-    NSString *fontName = [CBCTKFontManager fontNameForFontWithFamilyName:fontFamily italic:fontAttributes.italic bold:fontAttributes.bold monospace:fontAttributes.monospace];
+    if ([fontFamily isEqualToString:kCBCTKFontManagerSystemFontName]) {
+        if (fontAttributes.italic) {
+#if TARGET_OS_IPHONE
+                fontName = [CBFont italicSystemFontOfSize:fontSize].fontName;
+#else
+                fontName = [CBFont systemFontOfSize:fontSize].fontName;
+#endif
+        } else if (fontAttributes.bold) {
+            fontName = [CBFont boldSystemFontOfSize:fontSize].fontName;
+        } else {
+            fontName = [CBFont systemFontOfSize:fontSize].fontName;
+        }
+    }
+    
+    if (!fontName) fontName = [CBCTKFontManager fontNameForFontWithFamilyName:fontFamily italic:fontAttributes.italic bold:fontAttributes.bold monospace:fontAttributes.monospace];
     if (fontName) {
         
         font = CTFontCreateWithName((__bridge CFStringRef)fontName, fontSize, NULL);
