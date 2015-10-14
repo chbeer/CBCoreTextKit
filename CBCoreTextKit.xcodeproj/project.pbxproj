@@ -75,6 +75,7 @@
 		AAEF3A2C1BCF0D560000509E /* CBCTKFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AA512C52164A365A00E497FE /* CBCTKFontManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF3A341BCF0E5F0000509E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEF3A331BCF0E5F0000509E /* UIKit.framework */; };
 		AAEF3A351BCF0E660000509E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */; };
+		AAEF3A371BCF10110000509E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEF3A361BCF10110000509E /* CoreGraphics.framework */; };
 		AAF4EB0F15FE0B56003D1E51 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,7 @@
 		AAEF3A151BCF0CCE0000509E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		AAEF3A311BCF0D560000509E /* CBCoreTextKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCoreTextKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEF3A331BCF0E5F0000509E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AAEF3A361BCF10110000509E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AAF4EB0E15FE0B56003D1E51 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -175,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEF3A371BCF10110000509E /* CoreGraphics.framework in Frameworks */,
 				AAEF3A351BCF0E660000509E /* CoreText.framework in Frameworks */,
 				AAEF3A341BCF0E5F0000509E /* UIKit.framework in Frameworks */,
 			);
@@ -247,6 +250,7 @@
 		AAC3418915F516B600217914 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAEF3A361BCF10110000509E /* CoreGraphics.framework */,
 				AAEF3A331BCF0E5F0000509E /* UIKit.framework */,
 				AAEF3A151BCF0CCE0000509E /* Cocoa.framework */,
 				AAC3418A15F516B600217914 /* Foundation.framework */,
@@ -597,7 +601,6 @@
 				PRODUCT_NAME = CBCoreTextKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -621,7 +624,6 @@
 				PRODUCT_NAME = CBCoreTextKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -750,13 +752,11 @@
 				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = de.chbeer.ios.CBCoreTextKit;
 				PRODUCT_NAME = CBCoreTextKit;
-				SDKROOT = iphoneos9.0;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -776,12 +776,10 @@
 				INFOPLIST_FILE = "CBCoreTextKit/CBCoreTextKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = de.chbeer.ios.CBCoreTextKit;
 				PRODUCT_NAME = CBCoreTextKit;
-				SDKROOT = iphoneos9.0;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
