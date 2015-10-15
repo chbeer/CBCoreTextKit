@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AAEF3A171BCF0D560000509E"
-               BuildableName = "CBCoreTextKit iOS.framework"
+               BuildableName = "CBCoreTextKit.framework"
                BlueprintName = "CBCoreTextKit iOS"
                ReferencedContainer = "container:CBCoreTextKit.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAEF3A171BCF0D560000509E"
-            BuildableName = "CBCoreTextKit iOS.framework"
+            BuildableName = "CBCoreTextKit.framework"
             BlueprintName = "CBCoreTextKit iOS"
             ReferencedContainer = "container:CBCoreTextKit.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AAEF3A171BCF0D560000509E"
-            BuildableName = "CBCoreTextKit iOS.framework"
+            BuildableName = "CBCoreTextKit.framework"
             BlueprintName = "CBCoreTextKit iOS"
             ReferencedContainer = "container:CBCoreTextKit.xcodeproj">
          </BuildableReference>
