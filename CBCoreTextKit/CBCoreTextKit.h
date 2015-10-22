@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+//! Project version number for CBCoreTextKit.
+FOUNDATION_EXPORT double CBCoreTextKitVersionNumber;
+
+//! Project version string for CBCoreTextKit.
+FOUNDATION_EXPORT const unsigned char CBCoreTextKitVersionString[];
+
+
 #if TARGET_OS_IPHONE
 
+#import <UIKit/UIKit.h>
 #import <CoreText/CoreText.h>
 
 #endif
