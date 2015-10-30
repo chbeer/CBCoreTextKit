@@ -54,7 +54,7 @@
 		AACA2E92163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
 		AACA2E93163113E3006D28C6 /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
 		AAEF39CA1BCF04D60000509E /* NSAttributedString+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A976316BA3C1A009878C7 /* NSAttributedString+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAEF39CB1BCF04E60000509E /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */; settings = {ASSET_TAGS = (); }; };
+		AAEF39CB1BCF04E60000509E /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */; };
 		AAEF3A161BCF0CCE0000509E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEF3A151BCF0CCE0000509E /* Cocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		AAEF3A191BCF0D560000509E /* CBCTKGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5A50C15F74AAC002725C5 /* CBCTKGlobals.m */; };
 		AAEF3A1A1BCF0D560000509E /* NSAttributedString+CBCoreTextKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3419F15F5172F00217914 /* NSAttributedString+CBCoreTextKit.m */; };
@@ -62,7 +62,7 @@
 		AAEF3A1C1BCF0D560000509E /* NSAttributedString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8916311367006D28C6 /* NSAttributedString+HTML.m */; };
 		AAEF3A1D1BCF0D560000509E /* NSAttributedString+Glyphs.m in Sources */ = {isa = PBXBuildFile; fileRef = AACA2E8F163113E3006D28C6 /* NSAttributedString+Glyphs.m */; };
 		AAEF3A1E1BCF0D560000509E /* CBCTKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA512C53164A365A00E497FE /* CBCTKFontManager.m */; };
-		AAEF3A1F1BCF0D560000509E /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */; settings = {ASSET_TAGS = (); }; };
+		AAEF3A1F1BCF0D560000509E /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7A976416BA3C1A009878C7 /* NSAttributedString+UIKit.m */; };
 		AAEF3A201BCF0D560000509E /* CBCTKMarkdownParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9C9163164DA0EE00F75427 /* CBCTKMarkdownParser.m */; };
 		AAEF3A241BCF0D560000509E /* CBCoreTextKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC3418F15F516B600217914 /* CBCoreTextKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAEF3A251BCF0D560000509E /* NSAttributedString+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A976316BA3C1A009878C7 /* NSAttributedString+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -586,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -610,6 +611,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
