@@ -64,11 +64,11 @@
                                              handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
                                                  NSRange textRange = [result rangeAtIndex:2];
                                                  
-                                                 CTFontRef font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
-                                                                                        fontAttributes:(CBCTKFontAttributes){.bold = YES}];
+                                                 UIFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                                                                            fontAttributes:(CBCTKFontAttributes){.bold = YES}];
                                                  
                                                  NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
-                                                 [resultString addAttribute:(id)kCTFontAttributeName value:(__bridge id)font range:NSMakeRange(0, resultString.length)];
+                                                 [resultString addAttribute:(id)kCTFontAttributeName value:font range:NSMakeRange(0, resultString.length)];
                                                  
                                                  return resultString;
                                              }];
@@ -76,11 +76,11 @@
                                              handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
                                                  NSRange textRange = [result rangeAtIndex:2];
                                                  
-                                                 CTFontRef font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                                 UIFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
                                                                                         fontAttributes:(CBCTKFontAttributes){.italic = YES}];
                                                  
                                                  NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
-                                                 [resultString addAttribute:(id)kCTFontAttributeName value:(__bridge id)font range:NSMakeRange(0, resultString.length)];
+                                                 [resultString addAttribute:(id)kCTFontAttributeName value:font range:NSMakeRange(0, resultString.length)];
 
                                                  return resultString;
                                              }];

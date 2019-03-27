@@ -65,61 +65,33 @@ static NSString * const kCBCTKFontManagerSystemFontName = @"-system";
 
 + (NSString*) fontNameForFontWithFamilyName:(NSString *)family italic:(BOOL)italic bold:(BOOL)bold monospace:(BOOL)monospace
 {
-    return [[self fontDescriptors] objectForKey:[self keyForFontWithFamilyName:family italic:italic bold:bold monospace:monospace]];
+    UIFont *font = [self createFontWithFamilyName:family fontSize:12 fontAttributes:(CBCTKFontAttributes){.bold = bold, .italic = italic, .monospace = monospace}];
+    return font.fontName;
 }
 
 
-+ (CTFontRef) createFontWithFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
-                        fontAttributes:(CBCTKFontAttributes)fontAttributes
++ (UIFont*) createFontWithFamilyName:(NSString*)family fontSize:(CGFloat)fontSize
+                  fontAttributes:(CBCTKFontAttributes)fontAttributes
 {
-    CTFontRef font;
-    NSString *fontName = nil;
-    
-    if ([fontFamily isEqualToString:kCBCTKFontManagerSystemFontName]) {
-        if (fontAttributes.italic) {
-#if TARGET_OS_IPHONE
-                fontName = [CBFont italicSystemFontOfSize:fontSize].fontName;
-#else
-                fontName = [CBFont systemFontOfSize:fontSize].fontName;
-#endif
-        } else if (fontAttributes.bold) {
-            fontName = [CBFont boldSystemFontOfSize:fontSize].fontName;
-        } else {
-            fontName = [CBFont systemFontOfSize:fontSize].fontName;
-        }
+    if ([family isEqual:kCBCTKFontManagerSystemFontName]) {
+        family = [UIFont systemFontOfSize:12].familyName;
     }
     
-    if (!fontName) fontName = [CBCTKFontManager fontNameForFontWithFamilyName:fontFamily italic:fontAttributes.italic bold:fontAttributes.bold monospace:fontAttributes.monospace];
-    if (fontName) {
-        
-        font = CTFontCreateWithName((__bridge CFStringRef)fontName, fontSize, NULL);
-        
-    } else {
-        CTFontSymbolicTraits traits = 0;
-        if (fontAttributes.bold)
-        {
-            traits |= kCTFontBoldTrait;
-        }
-        if (fontAttributes.italic)
-        {
-            traits |= kCTFontItalicTrait;
-        }
-        if (fontAttributes.monospace)
-        {
-            traits |= kCTFontMonoSpaceTrait;
-        }
-        
-        NSDictionary *fontAttr = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  fontFamily, kCTFontFamilyNameAttribute,
-                                  [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:traits]
-                                                              forKey:(id)kCTFontSymbolicTrait], kCTFontTraitsAttribute,
-                                  nil];
-        
-        CTFontDescriptorRef descriptor = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)fontAttr);
-        font = CTFontCreateWithFontDescriptor(descriptor, fontSize, NULL);
-        CFRelease(descriptor);
+    NSMutableDictionary *traits = [NSMutableDictionary new];
+    if (fontAttributes.bold) {
+        traits[UIFontSymbolicTrait] = @(UIFontDescriptorTraitBold);
     }
-    
+    if (fontAttributes.italic) {
+        traits[UIFontSymbolicTrait] = @(UIFontDescriptorTraitItalic);
+    }
+    if (fontAttributes.monospace) {
+        traits[UIFontSymbolicTrait] = @(UIFontDescriptorTraitMonoSpace);
+    }
+    UIFontDescriptor *descriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:@{
+                                                                                        UIFontDescriptorFamilyAttribute: family,
+                                                                                        UIFontDescriptorTraitsAttribute: traits
+                                                                                        }];
+    UIFont *font = [UIFont fontWithDescriptor:descriptor size:fontSize];
     return font;
 }
 

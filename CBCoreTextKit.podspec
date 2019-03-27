@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CBCoreTextKit"
-  s.version      = "0.9.3"
+  s.version      = "0.9.4"
   s.summary      = "Helps working with Core Text."
   s.homepage     = "https://github.com/chbeer/CBCoreTextKit"
   s.license      = 'MIT'
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/chbeer/CBCoreTextKit.git", :tag => s.version.to_s }
   
   #  When using multiple platforms
-  s.ios.deployment_target = '6.1'
+  s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.7'
 
   s.source_files = 'CBCoreTextKit', 'CBCoreTextKit/**/*.{h,m}'
