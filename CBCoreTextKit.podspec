@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CBCoreTextKit"
-  s.version      = "0.9.4"
+  s.version      = "0.9.13"
   s.summary      = "Helps working with Core Text."
   s.homepage     = "https://github.com/chbeer/CBCoreTextKit"
   s.license      = 'MIT'
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   
   #  When using multiple platforms
   s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.7'
+  s.osx.deployment_target = '10.8'
 
   s.source_files = 'CBCoreTextKit', 'CBCoreTextKit/**/*.{h,m}'
   s.osx.exclude_files = 'CBCoreTextKit/**/*UIKit*.{h,m}'
