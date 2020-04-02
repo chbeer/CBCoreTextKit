@@ -10,6 +10,7 @@
 
 #if TARGET_OS_IPHONE
 #import <CoreText/CoreText.h>
+#import <UIKit/UIKit.h>
 #endif
 
 
