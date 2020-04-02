@@ -65,18 +65,21 @@ static NSString * const kCBCTKFontManagerSystemFontName = @"-system";
 
 + (NSString*) fontNameForFontWithFamilyName:(NSString *)family italic:(BOOL)italic bold:(BOOL)bold monospace:(BOOL)monospace
 {
-    UIFont *font = [self createFontWithFamilyName:family fontSize:12 fontAttributes:(CBCTKFontAttributes){.bold = bold, .italic = italic, .monospace = monospace}];
+    CBFont *font = [self createFontWithFamilyName:family fontSize:12 fontAttributes:(CBCTKFontAttributes){.bold = bold, .italic = italic, .monospace = monospace}];
     return font.fontName;
 }
 
 
-+ (UIFont*) createFontWithFamilyName:(NSString*)family fontSize:(CGFloat)fontSize
++ (CBFont*) createFontWithFamilyName:(NSString*)family fontSize:(CGFloat)fontSize
                   fontAttributes:(CBCTKFontAttributes)fontAttributes
 {
+    
     if ([family isEqual:kCBCTKFontManagerSystemFontName]) {
-        family = [UIFont systemFontOfSize:12].familyName;
+        family = [CBFont systemFontOfSize:12].familyName;
     }
     
+    #if TARGET_OS_IPHONE
+
     NSMutableDictionary *traits = [NSMutableDictionary new];
     if (fontAttributes.bold) {
         traits[UIFontSymbolicTrait] = @(UIFontDescriptorTraitBold);
@@ -93,6 +96,27 @@ static NSString * const kCBCTKFontManagerSystemFontName = @"-system";
                                                                                         }];
     UIFont *font = [UIFont fontWithDescriptor:descriptor size:fontSize];
     return font;
+
+    #else
+
+    NSMutableDictionary *traits = [NSMutableDictionary new];
+    if (fontAttributes.bold) {
+        traits[NSFontSymbolicTrait] = @(NSFontDescriptorTraitBold);
+    }
+    if (fontAttributes.italic) {
+        traits[NSFontSymbolicTrait] = @(NSFontDescriptorTraitItalic);
+    }
+    if (fontAttributes.monospace) {
+        traits[NSFontSymbolicTrait] = @(NSFontDescriptorTraitMonoSpace);
+    }
+    NSFontDescriptor *descriptor = [NSFontDescriptor fontDescriptorWithFontAttributes:@{
+                                                                                        NSFontFamilyAttribute: family,
+                                                                                        NSFontTraitsAttribute: traits
+                                                                                        }];
+    NSFont *font = [NSFont fontWithDescriptor:descriptor size:fontSize];
+    return font;
+
+    #endif
 }
 
 @end

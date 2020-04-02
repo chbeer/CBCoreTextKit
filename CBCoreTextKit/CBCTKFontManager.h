@@ -27,7 +27,7 @@
 
 + (BOOL) isFontRegisteredWithName:(NSString*)fontName isItalic:(BOOL*)italic isBold:(BOOL*)bold monospace:(BOOL*)monospace;
 
-+ (UIFont*) createFontWithFamilyName:(NSString*)family fontSize:(CGFloat)fontSize
++ (CBFont*) createFontWithFamilyName:(NSString*)family fontSize:(CGFloat)fontSize
                       fontAttributes:(CBCTKFontAttributes)fontAttributes;
 
 @end

@@ -64,7 +64,7 @@
                                              handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
                                                  NSRange textRange = [result rangeAtIndex:2];
                                                  
-                                                 UIFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                                 CBFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
                                                                                             fontAttributes:(CBCTKFontAttributes){.bold = YES}];
                                                  
                                                  NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
@@ -76,7 +76,7 @@
                                              handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
                                                  NSRange textRange = [result rangeAtIndex:2];
                                                  
-                                                 UIFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                                 CBFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
                                                                                         fontAttributes:(CBCTKFontAttributes){.italic = YES}];
                                                  
                                                  NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
