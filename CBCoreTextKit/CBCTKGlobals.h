@@ -29,7 +29,7 @@ typedef NSFont  CBFont;
 
 typedef struct {
     BOOL bold, italic, underline, monospace;
-    CGColorRef textColor;
+    CBColor *textColor;
 } CBCTKFontAttributes;
 
 typedef struct {

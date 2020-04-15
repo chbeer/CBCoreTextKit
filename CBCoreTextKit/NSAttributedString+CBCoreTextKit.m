@@ -101,7 +101,7 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
     /// --- COLOR ---
     
     if (fontAttributes.textColor) {
-        [attr setObject:(__bridge id)fontAttributes.textColor forKey:(id)kCTForegroundColorAttributeName];
+        [attr setObject:fontAttributes.textColor forKey:NSForegroundColorAttributeName];
     }
     
     [attr setObject:[NSNull null] forKey:@"NSKernAttributeName"];

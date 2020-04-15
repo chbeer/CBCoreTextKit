@@ -94,7 +94,7 @@
     
     NSMutableAttributedString *result = [NSMutableAttributedString attributedStringWithString:string
                                                                                fontFamilyName:self.fontFamilyName fontSize:self.fontSize
-                                                                               fontAttributes:(CBCTKFontAttributes){.textColor = self.textColor.CGColor}];
+                                                                               fontAttributes:(CBCTKFontAttributes){.textColor = self.textColor}];
     
     for (CBCTKMarkdownFormatPattern *pattern in self.formatPatterns) {
         NSString *string = [result string];
