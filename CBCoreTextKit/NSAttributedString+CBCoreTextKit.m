@@ -23,7 +23,7 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
     CTParagraphStyleSetting settings[kCTParagraphStyleSpecifierCount];
     int settingsCount = 0;
     
-    if (paragraphAttributes.alignment != 0 && paragraphAttributes.alignment != kCTNaturalTextAlignment) {
+    if (paragraphAttributes.alignment != 0 && paragraphAttributes.alignment != kCTTextAlignmentNatural) {
         settings[settingsCount++] = (CTParagraphStyleSetting){kCTParagraphStyleSpecifierAlignment, sizeof(paragraphAttributes.alignment), &paragraphAttributes.alignment};
     }
     if (paragraphAttributes.firstLineHeadIndent != 0.0) {
@@ -49,9 +49,6 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
     }
     if (paragraphAttributes.maximumLineHeight != 0.0) {
         settings[settingsCount++] = (CTParagraphStyleSetting){kCTParagraphStyleSpecifierMaximumLineHeight, sizeof(paragraphAttributes.maximumLineHeight), &paragraphAttributes.maximumLineHeight};
-    }
-    if (paragraphAttributes.lineSpacing != 0.0) {
-        settings[settingsCount++] = (CTParagraphStyleSetting){kCTParagraphStyleSpecifierLineSpacing, sizeof(paragraphAttributes.lineSpacing), &paragraphAttributes.lineSpacing};
     }
     if (paragraphAttributes.paragraphSpacing != 0.0) {
         settings[settingsCount++] = (CTParagraphStyleSetting){kCTParagraphStyleSpecifierParagraphSpacing, sizeof(paragraphAttributes.paragraphSpacing), &paragraphAttributes.paragraphSpacing};

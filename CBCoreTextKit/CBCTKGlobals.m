@@ -8,8 +8,8 @@
 
 #import "CBCTKGlobals.h"
 
-const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesDefault = { kCTNaturalTextAlignment, 0.0, 0.0, 0.0, 0.0, kCTLineBreakByWordWrapping, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, kCTWritingDirectionNatural};
-const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesZero = { 0, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0};
+const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesDefault = { 0, 0.0, 0.0, 0.0, 0.0, kCTLineBreakByWordWrapping, 0.0, 0.0, 0.0, 0.0, 0.0, kCTWritingDirectionNatural};
+const CBNSAttributedStringParagraphAttributes kCBNSParagraphAttributesZero = { 0, 0.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0};
 
 BOOL CBNSAttributedStringParagraphAttributesEqual(CBNSAttributedStringParagraphAttributes a, CBNSAttributedStringParagraphAttributes b)
 {
@@ -22,7 +22,6 @@ BOOL CBNSAttributedStringParagraphAttributesEqual(CBNSAttributedStringParagraphA
             a.lineHeightMultiple == b.lineHeightMultiple &&
             a.maximumLineHeight == b.maximumLineHeight &&
             a.minimumLineHeight == b.minimumLineHeight &&
-            a.lineSpacing == b.lineSpacing &&
             a.paragraphSpacing == b.paragraphSpacing &&
             a.paragraphSpacingBefore == b.paragraphSpacingBefore &&
             a.baseWritingDirection == b.baseWritingDirection);
@@ -38,7 +37,6 @@ BOOL CBNSAttributedStringParagraphAttributesZero(CBNSAttributedStringParagraphAt
             a.lineHeightMultiple == 0.0 &&
             a.maximumLineHeight == 0.0 &&
             a.minimumLineHeight == 0.0 &&
-            a.lineSpacing == 0.0 &&
             a.paragraphSpacing == 0.0 &&
             a.paragraphSpacingBefore == 0.0 &&
             a.baseWritingDirection == 0);
@@ -48,7 +46,7 @@ NSParagraphStyle *CBNSParagraphStyleWithAttributes(CBNSAttributedStringParagraph
 {
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     
-    if (paragraphAttributes.alignment != 0 && paragraphAttributes.alignment != kCTNaturalTextAlignment) {
+    if (paragraphAttributes.alignment != 0) {
         style.alignment = (NSTextAlignment)paragraphAttributes.alignment;
     }
     if (paragraphAttributes.firstLineHeadIndent != 0.0) {
@@ -74,9 +72,6 @@ NSParagraphStyle *CBNSParagraphStyleWithAttributes(CBNSAttributedStringParagraph
     }
     if (paragraphAttributes.maximumLineHeight != 0.0) {
         style.maximumLineHeight = paragraphAttributes.maximumLineHeight;
-    }
-    if (paragraphAttributes.lineSpacing != 0.0) {
-        style.lineSpacing = paragraphAttributes.lineSpacing;
     }
     if (paragraphAttributes.paragraphSpacing != 0.0) {
         style.paragraphSpacing = paragraphAttributes.paragraphSpacing;

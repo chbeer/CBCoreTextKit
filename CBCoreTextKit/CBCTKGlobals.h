@@ -42,7 +42,6 @@ typedef struct {
     CGFloat lineHeightMultiple;
     CGFloat maximumLineHeight;
     CGFloat minimumLineHeight;
-    CGFloat lineSpacing;
     CGFloat paragraphSpacing;
     CGFloat paragraphSpacingBefore;
     CTWritingDirection baseWritingDirection;
