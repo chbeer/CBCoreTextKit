@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CBCoreTextKit"
-  s.version      = "0.9.15"
+  s.version      = "0.9.16"
   s.summary      = "Helps working with Core Text."
   s.homepage     = "https://github.com/chbeer/CBCoreTextKit"
   s.license      = 'MIT'
