@@ -95,6 +95,16 @@ static NSString * const kCBCTKFontManagerSystemFontName = @"-system";
                                                                                         UIFontDescriptorTraitsAttribute: traits
                                                                                         }];
     UIFont *font = [UIFont fontWithDescriptor:descriptor size:fontSize];
+    if (font == nil) {
+        descriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:@{
+            UIFontDescriptorFamilyAttribute: [CBFont systemFontOfSize:12].familyName,
+            UIFontDescriptorTraitsAttribute: traits
+        }];
+        font = [UIFont fontWithDescriptor:descriptor size:fontSize];
+    }
+    if (font == nil) {
+        font = [CBFont systemFontOfSize:fontSize];
+    }
     return font;
 
     #else
@@ -114,6 +124,16 @@ static NSString * const kCBCTKFontManagerSystemFontName = @"-system";
                                                                                         NSFontTraitsAttribute: traits
                                                                                         }];
     NSFont *font = [NSFont fontWithDescriptor:descriptor size:fontSize];
+    if (font == nil) {
+        descriptor = [NSFontDescriptor fontDescriptorWithFontAttributes:@{
+            NSFontFamilyAttribute: [CBFont systemFontOfSize:12].familyName,
+            NSFontTraitsAttribute: traits
+        }];
+        font = [NSFont fontWithDescriptor:descriptor size:fontSize];
+    }
+    if (font == nil) {
+        font = [CBFont systemFontOfSize:fontSize];
+    }
     return font;
 
     #endif
