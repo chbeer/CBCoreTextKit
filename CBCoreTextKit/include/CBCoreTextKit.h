@@ -23,20 +23,20 @@ FOUNDATION_EXPORT const unsigned char CBCoreTextKitVersionString[];
 #endif
 
 
-#import "CBCTKGlobals.h"
+#import "../CBCTKGlobals.h"
 
-#import "NSAttributedString+CBCoreTextKit.h"
-#import "NSAttributedString+Glyphs.h"
-#import "NSAttributedString+HTML.h"
-#import "NSAttributedString+DokuWiki.h"
+#import "../NSAttributedString+CBCoreTextKit.h"
+#import "../NSAttributedString+Glyphs.h"
+#import "../NSAttributedString+HTML.h"
+#import "../NSAttributedString+DokuWiki.h"
 
-#import "CBCTKFontManager.h"
+#import "../CBCTKFontManager.h"
 
-#import "CBCTKMarkdownParser.h"
+#import "../CBCTKMarkdownParser.h"
 
 
 #if TARGET_OS_IPHONE
 
-#import "NSAttributedString+UIKit.h"
+#import "../NSAttributedString+UIKit.h"
 
 #endif

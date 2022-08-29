@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Christian Beer. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface CBNSAttributedStringMarkdownParserTest : SenTestCase
+@interface CBNSAttributedStringMarkdownParserTest : XCTestCase
 
 @end

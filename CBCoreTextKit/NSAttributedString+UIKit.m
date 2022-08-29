@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Christian Beer. All rights reserved.
 //
 
+#include "TargetConditionals.h"
 #if TARGET_OS_IPHONE
 
 #import "NSAttributedString+UIKit.h"
