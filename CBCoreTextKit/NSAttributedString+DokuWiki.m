@@ -1,6 +1,6 @@
 //
 //  CBNSAttributedString+DokuWiki.m
-//  CBUIKit
+//  CBCoreTextKit
 //
 //  Created by Christian Beer on 28.06.11.
 //  Copyright 2011 Christian Beer. All rights reserved.

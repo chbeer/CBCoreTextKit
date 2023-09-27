@@ -1,6 +1,6 @@
 //
-//  NSAttributedString+CBUIKit.h
-//  CBUIKit
+//  NSAttributedString+CBCoreTextKit.h
+//  CBCoreTextKit
 //
 //  Created by Christian Beer on 24.08.12.
 //
@@ -14,7 +14,7 @@
 extern CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttributedStringParagraphAttributes paragraphAttributes);
 
 
-@interface NSAttributedString (CBUIKit)
+@interface NSAttributedString (CBCoreTextKit)
 
 + (id) attributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize
                    fontAttributes:(CBCTKFontAttributes)fontAttributes paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
@@ -34,7 +34,7 @@ extern CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNS
 
 @end
 
-@interface NSMutableAttributedString (CBUIKit)
+@interface NSMutableAttributedString (CBCoreTextKit)
 
 - (void) appendAttributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize fontAttributes:(CBCTKFontAttributes)attributes
                       paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes

@@ -90,7 +90,10 @@
 
 - (NSAttributedString*) parseMarkdownString:(NSString*)string
 {
-    if (!string) return nil;
+    if (string == nil) {
+        return [NSAttributedString attributedStringWithString:@"" fontFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                               fontAttributes:(CBCTKFontAttributes){.textColor = self.textColor}];
+    }
     
     NSMutableAttributedString *result = [NSMutableAttributedString attributedStringWithString:string
                                                                                fontFamilyName:self.fontFamilyName fontSize:self.fontSize

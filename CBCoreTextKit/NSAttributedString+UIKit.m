@@ -7,7 +7,10 @@
 //
 
 #include "TargetConditionals.h"
+
 #if TARGET_OS_IPHONE
+
+@import UIKit;
 
 #import "NSAttributedString+UIKit.h"
 

@@ -1,6 +1,6 @@
 //
-//  NSAttributedString+CBUIKit.m
-//  CBUIKit
+//  NSAttributedString+CBCoreTextKit.m
+//  CBCoreTextKit
 //
 //  Created by Christian Beer on 24.08.12.
 //
@@ -13,7 +13,7 @@
 #import "CBCTKFontManager.h"
 
 
-@implementation NSAttributedString (CBUIKit)
+@implementation NSAttributedString (CBCoreTextKit)
 
 CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttributedStringParagraphAttributes paragraphAttributes)
 {
@@ -186,7 +186,7 @@ CTParagraphStyleRef CBCTKCreateParagraphStyleFromParagraphAttributes(CBNSAttribu
 @end
 
 
-@implementation NSMutableAttributedString (CBUIKit)
+@implementation NSMutableAttributedString (CBCoreTextKit)
 
 - (void) appendAttributedStringWithString:(NSString*)string fontFamilyName:(NSString*)fontFamily fontSize:(CGFloat)fontSize fontAttributes:(CBCTKFontAttributes)attributes
                       paragraphAttributes:(CBNSAttributedStringParagraphAttributes)paragraphAttributes
