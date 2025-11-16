@@ -90,10 +90,19 @@ static NSString * const kCBCTKFontManagerSystemFontName = @"-system";
     if (fontAttributes.monospace) {
         traits[UIFontSymbolicTrait] = @(UIFontDescriptorTraitMonoSpace);
     }
-    UIFontDescriptor *descriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:@{
-                                                                                        UIFontDescriptorFamilyAttribute: family,
-                                                                                        UIFontDescriptorTraitsAttribute: traits
-                                                                                        }];
+    
+    UIFontDescriptor *descriptor;
+    
+    UIFont *fnt = [UIFont fontWithName:family size:12];
+    if (fnt) {
+        descriptor = fnt.fontDescriptor;
+    } else {
+        descriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:@{
+            UIFontDescriptorFamilyAttribute: family,
+            UIFontDescriptorTraitsAttribute: traits
+        }];
+    }
+    
     UIFont *font = [UIFont fontWithDescriptor:descriptor size:fontSize];
     if (font == nil) {
         descriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:@{
