@@ -62,28 +62,34 @@
 {
     [self registerFormatPatternWithRegularExpression:[[self class] markdownRegularExpressionForStrong]
                                              handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
-                                                 NSRange textRange = [result rangeAtIndex:2];
-                                                 
-                                                 CBFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
-                                                                                            fontAttributes:(CBCTKFontAttributes){.bold = YES}];
-                                                 
-                                                 NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
-                                                 [resultString addAttribute:(id)kCTFontAttributeName value:font range:NSMakeRange(0, resultString.length)];
-                                                 
-                                                 return resultString;
-                                             }];
+        NSRange textRange = [result rangeAtIndex:1];
+        if (textRange.location == NSNotFound) {
+            textRange = [result rangeAtIndex:2];
+        }
+        
+        CBFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                                   fontAttributes:(CBCTKFontAttributes){.bold = YES}];
+        
+        NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
+        [resultString addAttribute:(id)kCTFontAttributeName value:font range:NSMakeRange(0, resultString.length)];
+        
+        return resultString;
+    }];
     [self registerFormatPatternWithRegularExpression:[[self class] markdownRegularExpressionForEm]
                                              handler:^NSAttributedString*(NSTextCheckingResult *result, NSAttributedString *attributedString, NSString *markdownString, NSRange *replacementRange) {
-                                                 NSRange textRange = [result rangeAtIndex:2];
-                                                 
-                                                 CBFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
-                                                                                        fontAttributes:(CBCTKFontAttributes){.italic = YES}];
-                                                 
-                                                 NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
-                                                 [resultString addAttribute:(id)kCTFontAttributeName value:font range:NSMakeRange(0, resultString.length)];
-
-                                                 return resultString;
-                                             }];
+        NSRange textRange = [result rangeAtIndex:1];
+        if (textRange.location == NSNotFound) {
+            textRange = [result rangeAtIndex:2];
+        }
+        
+        CBFont *font = [CBCTKFontManager createFontWithFamilyName:self.fontFamilyName fontSize:self.fontSize
+                                                   fontAttributes:(CBCTKFontAttributes){.italic = YES}];
+        
+        NSMutableAttributedString *resultString = [[attributedString attributedSubstringFromRange:textRange] mutableCopy];
+        [resultString addAttribute:(id)kCTFontAttributeName value:font range:NSMakeRange(0, resultString.length)];
+        
+        return resultString;
+    }];
 }
 
 #pragma mark - parse
@@ -130,18 +136,18 @@
  
  return $text;
  }
-*/
+ */
 + (NSRegularExpression*) markdownRegularExpressionForStrong
 {
     NSError *error;
-    NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:@"(\\*\\*|__)(?=\\S)(.+?[*_]*)(?<=\\S)\\1"
+    NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:@"\\*\\*(.+?)\\*\\*|__(.+?)__" //@"(\\*\\*|__)(?=\\S)(.+?[*_]*)(?<=\\S)\\1"
                                                                             options:0 error:&error];
     return regexp;
 }
 + (NSRegularExpression*) markdownRegularExpressionForEm
 {
     NSError *error;
-    NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:@"(\\*|_)(?=\\S)(.+?)(?<=\\S)\\1"
+    NSRegularExpression *regexp = [NSRegularExpression regularExpressionWithPattern:@"\\*(.+?)\\*|_(.+?)_" //@"(\\*|_)(?=\\S)(.+?)(?<=\\S)\\1"
                                                                             options:0 error:&error];
     return regexp;
 }

@@ -95,13 +95,13 @@ static NSString * const kCBCTKFontManagerSystemFontName = @"-system";
     
     UIFont *fnt = [UIFont fontWithName:family size:12];
     if (fnt) {
-        descriptor = fnt.fontDescriptor;
-    } else {
-        descriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:@{
-            UIFontDescriptorFamilyAttribute: family,
-            UIFontDescriptorTraitsAttribute: traits
-        }];
+        family = fnt.familyName;
     }
+        
+    descriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:@{
+        UIFontDescriptorFamilyAttribute: family,
+        UIFontDescriptorTraitsAttribute: traits
+    }];
     
     UIFont *font = [UIFont fontWithDescriptor:descriptor size:fontSize];
     if (font == nil) {
